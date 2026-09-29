@@ -35,7 +35,25 @@ import content.criminal  # noqa: E402,F401
 import content.cities  # noqa: E402,F401
 import content.posts  # noqa: E402,F401
 
-BUILD_DATE = firm.BUILD_DATE
+BUILD_DATE = datetime.date.today().isoformat()
+LASTMOD_PATH = os.path.join(ROOT, "site", "content", "lastmod.json")
+
+
+def main_hash(html):
+    """Fingerprint of a page's <main> so lastmod only moves when the content does (not on every rebuild)."""
+    m = re.search(r"<main\b.*?</main>", html, re.S)
+    return hashlib.sha1((m.group(0) if m else html).encode("utf-8")).hexdigest()[:16]
+
+
+def load_lastmod():
+    try:
+        return json.load(open(LASTMOD_PATH, encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def page_lastmod(p):
+    return p.get("lastmod") or p["modified"] or BUILD_DATE
 ORIGIN = firm.ORIGIN
 MODE = "prod"
 WARNINGS = []
@@ -512,7 +530,7 @@ def page_ld(p):
     graph.append({"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": l, "item": abs_url(s)} for i, (s, l) in enumerate(trail)]})
     wp = {"@type": "WebPage", "@id": abs_url(p["slug"]), "url": abs_url(p["slug"]), "name": p["title"], "description": p["description"],
           "isPartOf": {"@type": "WebSite", "@id": ORIGIN + "/#website", "url": ORIGIN + "/", "name": firm.NAME, "publisher": {"@id": ORIGIN + "/#firm"}},
-          "about": {"@id": ORIGIN + "/#firm"}, "inLanguage": "en-US", "dateModified": p["modified"] or BUILD_DATE}
+          "about": {"@id": ORIGIN + "/#firm"}, "inLanguage": "en-US", "dateModified": page_lastmod(p)}
     graph.append(wp)
     if p["kind"] == "home" or p["slug"] == "contact-us":
         graph.append(firm_ld())
@@ -598,12 +616,24 @@ def write_prod():
     shutil.copy(css_src, os.path.join(OUT, "assets", css_name))
     shutil.copytree(os.path.join(ASSETS, "fonts"), os.path.join(OUT, "assets", "fonts"))
     # pages
+    registry, new_registry = load_lastmod(), {}
     for p in PAGES:
         html = render_prod(p)
+        h = main_hash(html)
+        prev = registry.get(p["slug"])
+        date = prev["lastmod"] if prev and prev.get("hash") == h else BUILD_DATE
+        if p["modified"] and p["modified"] > date:
+            date = p["modified"]
+        new_registry[p["slug"]] = {"hash": h, "lastmod": date}
+        if date != page_lastmod(p):
+            p["lastmod"] = date
+            html = render_prod(p)  # the head's dateModified must match the sitemap
+        p["lastmod"] = date
         check_page(p, html)
         d = OUT if p["slug"] == "home" else os.path.join(OUT, p["slug"])
         os.makedirs(d, exist_ok=True)
         open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(html)
+    json.dump(dict(sorted(new_registry.items())), open(LASTMOD_PATH, "w", encoding="utf-8"), indent=1)
     # images (optimized copies) + placeholders
     if os.path.isdir(IMG_DIR):
         for name in os.listdir(IMG_DIR):
@@ -629,7 +659,7 @@ def write_prod():
     for p in PAGES:
         if p["noindex"]:
             continue
-        urls.append(f"<url><loc>{abs_url(p['slug'])}</loc><lastmod>{p['modified'] or BUILD_DATE}</lastmod><changefreq>{p['changefreq']}</changefreq><priority>{p['priority']:.1f}</priority></url>")
+        urls.append(f"<url><loc>{abs_url(p['slug'])}</loc><lastmod>{page_lastmod(p)}</lastmod><changefreq>{p['changefreq']}</changefreq><priority>{p['priority']:.1f}</priority></url>")
     open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8").write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(urls) + "</urlset>")
     open(os.path.join(OUT, "robots.txt"), "w", encoding="utf-8").write(f"User-agent: *\nAllow: /\n\nSitemap: {ORIGIN}/sitemap.xml\n")
     open(os.path.join(OUT, ".htaccess"), "w", encoding="utf-8").write(htaccess())
