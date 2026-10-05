@@ -51,7 +51,8 @@ DISCLAIMER = ("This website is for informational purposes only and does not crea
               "Nothing here is legal advice for your situation; talk to a licensed South Carolina attorney about your facts.")
 ASIDE_BLURB = "Jack and Tara answer their own phones. Tell us what happened and we'll tell you the next step."
 LLMS_SUMMARY = ("Frost Law Group, LLC is a husband-and-wife law firm in Summerville, South Carolina handling estate planning, "
-                "probate and criminal defense for families in Dorchester, Berkeley and Charleston counties. Personal injury cases are handled at summervilleaccidentattorney.com.")
+                "probate, criminal defense and landlord-tenant matters (evictions, tenant defense, security deposits) for families in Dorchester, Berkeley and "
+                "Charleston counties. Personal injury cases are handled at summervilleaccidentattorney.com.")
 
 LOGO = "logo.png"  # the firm's logo, pulled from the live site
 OG_SOURCE = "couple.jpg"
@@ -76,7 +77,7 @@ ATTORNEYS = {
         byline="Attorney at Law · former Dorchester County Magistrate and Associate Probate Judge",
         aside="Tara served as a Dorchester County Magistrate Judge (2022–2025) and Associate Probate Judge (2025–2026). She has sat on the other side of the probate bench and knows what the court needs to see.",
         alumni=["Charleston School of Law"],
-        knows=["Probate and estate administration", "Estate planning", "Guardianship and conservatorship", "Wills and trusts", "Personal injury"],
+        knows=["Probate and estate administration", "Estate planning", "Guardianship and conservatorship", "Wills and trusts", "Landlord-tenant and evictions", "Personal injury"],
         same_as=["https://www.linkedin.com/in/tara-frost-7b394551/"],
         ld_description="Summerville, SC probate, estate planning and personal injury attorney; former Dorchester County Magistrate Judge and Associate Probate Judge; South Carolina Bar No. 100610.",
     ),
@@ -110,17 +111,21 @@ REVIEWS = [
 HUB_SPOKES = {
     "estate-planning-attorney": ["last-will-and-testament", "revocable-trust", "power-of-attorney", "living-will", "asset-protection-trusts",
                                  "estate-planning-for-blended-families", "estate-plan-review", "estate-planning-for-business-owners",
-                                 "special-needs-planning", "dying-without-a-will-in-south-carolina", "estate-planning-costs", "high-net-worth-estate-planning"],
+                                 "special-needs-planning", "dying-without-a-will-in-south-carolina", "estate-planning-costs", "high-net-worth-estate-planning",
+                                 "estate-planning-attorney-charleston-sc"],
     "probate": ["probate-process", "executor-duties", "executor-disputes", "small-estate-affidavit", "will-contests",
-                "guardianship-and-conservatorship", "trust-administration", "probate-courts"],
+                "guardianship-and-conservatorship", "guardianship-of-minors", "trust-administration", "probate-courts",
+                "dorchester-county-probate-court", "berkeley-county-probate-court", "charleston-county-probate-court", "probate-attorney-charleston-sc"],
     "criminal-defense": ["dui-lawyer-summerville-sc", "drug-charges", "domestic-violence-defense", "bond-hearings", "expungements", "traffic-tickets", "arrest-warrants"],
+    "eviction-lawyer-summerville-sc": ["south-carolina-eviction-process", "south-carolina-security-deposit-law"],
 }
-HUB_ATTORNEY = {"estate-planning-attorney": "tara", "probate": "tara", "criminal-defense": "jack"}
+HUB_ATTORNEY = {"estate-planning-attorney": "tara", "probate": "tara", "criminal-defense": "jack", "eviction-lawyer-summerville-sc": "tara"}
 
 NAV = [
     ("Estate Planning", "estate-planning-attorney", HUB_SPOKES["estate-planning-attorney"][:8], "All estate planning services"),
-    ("Probate", "probate", HUB_SPOKES["probate"], "All probate services"),
+    ("Probate", "probate", HUB_SPOKES["probate"][:9], "All probate services"),
     ("Criminal Defense", "criminal-defense", [s for s in HUB_SPOKES["criminal-defense"] if s != "dui-lawyer-summerville-sc"], "All criminal defense services"),
+    ("Landlord-Tenant", "eviction-lawyer-summerville-sc", HUB_SPOKES["eviction-lawyer-summerville-sc"], "All landlord-tenant services"),
     ("Personal Injury", PI_SITE, [], ""),  # external: the injury site owns every injury page
     ("About", "about-us", ["attorneys/jack-frost", "attorneys/tara-frost", "reviews", "service-areas", "faq"], "Our team"),
     ("In the Know", "blog", [], ""),
@@ -128,7 +133,8 @@ NAV = [
 
 FOOTER_PRACTICE = [("Estate planning", "estate-planning-attorney"), ("Wills", "last-will-and-testament"), ("Revocable living trusts", "revocable-trust"),
                    ("Powers of attorney", "power-of-attorney"), ("Probate", "probate"), ("Guardianship & conservatorship", "guardianship-and-conservatorship"),
-                   ("Criminal defense", "criminal-defense"), ("Expungements", "expungements")]
+                   ("Criminal defense", "criminal-defense"), ("Expungements", "expungements"), ("Evictions & landlord-tenant", "eviction-lawyer-summerville-sc"),
+                   ("County probate court guides", "probate-courts")]
 FOOTER_EXPLORE = [("Our team", "about-us"), ("Jack C. Frost", "attorneys/jack-frost"), ("Tara L. Frost", "attorneys/tara-frost"), ("Client reviews", "reviews"),
                   ("In the Know (blog)", "blog"), ("Frequently asked questions", "faq"), ("Contact & directions", "contact-us")]
 FOOTER_AREAS = ["service-areas/summerville", "service-areas/goose-creek", "service-areas/ladson", "service-areas/north-charleston", "service-areas/moncks-corner",

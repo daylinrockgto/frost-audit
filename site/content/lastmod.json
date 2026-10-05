@@ -1,295 +1,331 @@
 {
  "about-us": {
-  "hash": "19cda3f3ae82b784",
-  "lastmod": "2026-09-17"
+  "hash": "e5b21ec8d2d983d2",
+  "lastmod": "2026-10-05"
  },
  "accessibility": {
   "hash": "d9f51b5a109bfd1b",
   "lastmod": "2026-09-16"
  },
  "arrest-warrants": {
-  "hash": "ea30c6ca89701fe4",
-  "lastmod": "2026-09-17"
+  "hash": "0ee3d3cf8e6bef1a",
+  "lastmod": "2026-10-05"
  },
  "asset-protection-trusts": {
-  "hash": "145bd94581131471",
-  "lastmod": "2026-09-17"
+  "hash": "2c8afd0b56c798aa",
+  "lastmod": "2026-10-05"
  },
  "attorneys/jack-frost": {
   "hash": "9aa3c929d8dc0bed",
   "lastmod": "2026-09-17"
  },
  "attorneys/tara-frost": {
-  "hash": "53c33b8d3850fe05",
-  "lastmod": "2026-09-17"
+  "hash": "d592feb201b4eedf",
+  "lastmod": "2026-10-05"
+ },
+ "berkeley-county-probate-court": {
+  "hash": "33bf287503714b29",
+  "lastmod": "2026-10-05"
  },
  "blog": {
   "hash": "29a3ad223b016cd0",
   "lastmod": "2026-09-17"
  },
  "blog/do-i-need-a-probate-lawyer-south-carolina-reddit": {
-  "hash": "4c1f3bc5817c1faf",
-  "lastmod": "2026-09-17"
+  "hash": "058b5b5b340d4667",
+  "lastmod": "2026-10-05"
  },
  "blog/domestic-violence-arrest-first-72-hours-dorchester-county": {
-  "hash": "06951e9a3b52a533",
-  "lastmod": "2026-09-17"
+  "hash": "0d2de8735d5cf169",
+  "lastmod": "2026-10-05"
  },
  "blog/expungement-clinics-who-qualifies-dorchester-berkeley": {
-  "hash": "236888a9030ae8f9",
-  "lastmod": "2026-09-17"
+  "hash": "52ec67b38c7ce336",
+  "lastmod": "2026-10-05"
  },
  "blog/guardianship-aging-parent-summerville": {
-  "hash": "f66f2544b295e145",
-  "lastmod": "2026-09-17"
+  "hash": "7ce9170519cca97d",
+  "lastmod": "2026-10-05"
  },
  "blog/hurricane-season-documents-dorchester-county": {
-  "hash": "7c82b5ed7277bea6",
-  "lastmod": "2026-09-17"
+  "hash": "283b091299adb9ad",
+  "lastmod": "2026-10-05"
  },
  "blog/new-summerville-residents-estate-plan": {
-  "hash": "7312db656ba68221",
-  "lastmod": "2026-09-17"
+  "hash": "13e33c28aec2523c",
+  "lastmod": "2026-10-05"
  },
  "blog/school-zone-traffic-enforcement-summerville": {
-  "hash": "17e22164f7a12dff",
-  "lastmod": "2026-09-17"
+  "hash": "9891da494ec5ae2c",
+  "lastmod": "2026-10-05"
  },
  "blog/summerville-address-berkeley-county-what-it-means": {
-  "hash": "74ca04b24acbce8b",
-  "lastmod": "2026-09-17"
+  "hash": "a9c9991a3e7587b4",
+  "lastmod": "2026-10-05"
  },
  "bond-hearings": {
-  "hash": "aec05eb6d9fbb78f",
-  "lastmod": "2026-09-17"
+  "hash": "fb133ed0191ff0b7",
+  "lastmod": "2026-10-05"
+ },
+ "charleston-county-probate-court": {
+  "hash": "84c58e4f10e85831",
+  "lastmod": "2026-10-05"
  },
  "contact-us": {
   "hash": "9270df27a721895f",
   "lastmod": "2026-09-17"
  },
  "criminal-defense": {
-  "hash": "63d02d0dc01870b8",
-  "lastmod": "2026-09-17"
+  "hash": "d09bd2f31c7fe67e",
+  "lastmod": "2026-10-05"
  },
  "domestic-violence-defense": {
-  "hash": "bf88a827e0208b2b",
-  "lastmod": "2026-09-17"
+  "hash": "5e50c2eb600bf86b",
+  "lastmod": "2026-10-05"
+ },
+ "dorchester-county-probate-court": {
+  "hash": "4d5ab585b9834356",
+  "lastmod": "2026-10-05"
  },
  "drug-charges": {
-  "hash": "2aa002b0b379ea2e",
-  "lastmod": "2026-09-17"
+  "hash": "f916ebd75508ba8b",
+  "lastmod": "2026-10-05"
  },
  "dui-lawyer-summerville-sc": {
-  "hash": "142fd4afa3930bcc",
-  "lastmod": "2026-09-17"
+  "hash": "2d2f00f9191326e6",
+  "lastmod": "2026-10-05"
  },
  "dying-without-a-will-in-south-carolina": {
-  "hash": "94343921af099b79",
-  "lastmod": "2026-09-17"
+  "hash": "7da02c90c830ac5c",
+  "lastmod": "2026-10-05"
  },
  "estate-plan-review": {
-  "hash": "0952c64fb0a548c5",
-  "lastmod": "2026-09-17"
+  "hash": "c7c7e0d7bd6d9f2e",
+  "lastmod": "2026-10-05"
  },
  "estate-planning-attorney": {
-  "hash": "a1aec00a1eb17498",
-  "lastmod": "2026-09-17"
+  "hash": "20920583a77bb8cb",
+  "lastmod": "2026-10-05"
+ },
+ "estate-planning-attorney-charleston-sc": {
+  "hash": "acae71cf5dc5a8bb",
+  "lastmod": "2026-10-05"
  },
  "estate-planning-costs": {
-  "hash": "cb7ccbb7fc583c39",
-  "lastmod": "2026-09-17"
+  "hash": "993e459ffb6761bf",
+  "lastmod": "2026-10-05"
  },
  "estate-planning-for-blended-families": {
-  "hash": "7906974cf6666464",
-  "lastmod": "2026-09-17"
+  "hash": "093cf9d63adb20f3",
+  "lastmod": "2026-10-05"
  },
  "estate-planning-for-business-owners": {
-  "hash": "39d860f3b8007a8c",
-  "lastmod": "2026-09-17"
+  "hash": "cc15635409db397e",
+  "lastmod": "2026-10-05"
+ },
+ "eviction-lawyer-summerville-sc": {
+  "hash": "b7a54d82433b6523",
+  "lastmod": "2026-10-05"
  },
  "executor-disputes": {
-  "hash": "9e3fefa1322279ac",
-  "lastmod": "2026-09-17"
+  "hash": "dfb319cfb79bdcf9",
+  "lastmod": "2026-10-05"
  },
  "executor-duties": {
-  "hash": "8d2d53dacb9ec0f8",
-  "lastmod": "2026-09-17"
+  "hash": "c4d8633e06dfe828",
+  "lastmod": "2026-10-05"
  },
  "expungements": {
-  "hash": "9e1465c1f3132f3e",
-  "lastmod": "2026-09-17"
+  "hash": "e3509323118ebbb3",
+  "lastmod": "2026-10-05"
  },
  "faq": {
-  "hash": "a5241088407587d0",
-  "lastmod": "2026-09-17"
+  "hash": "d1698ceeaae95b2c",
+  "lastmod": "2026-10-05"
  },
  "guardianship-and-conservatorship": {
-  "hash": "c98b4daad1be129c",
-  "lastmod": "2026-09-17"
+  "hash": "ada9b434c6fceb32",
+  "lastmod": "2026-10-05"
+ },
+ "guardianship-of-minors": {
+  "hash": "e1f5df04ab63b739",
+  "lastmod": "2026-10-05"
  },
  "high-net-worth-estate-planning": {
-  "hash": "fba75aa855e0f710",
-  "lastmod": "2026-09-17"
+  "hash": "d0ab9c7a30b9b7e8",
+  "lastmod": "2026-10-05"
  },
  "home": {
-  "hash": "1a4eb7eb111ad444",
-  "lastmod": "2026-09-17"
+  "hash": "83661a1bdef41076",
+  "lastmod": "2026-10-05"
  },
  "last-will-and-testament": {
-  "hash": "503edbea21d59159",
-  "lastmod": "2026-09-17"
+  "hash": "58fb4931057fe344",
+  "lastmod": "2026-10-05"
  },
  "living-will": {
-  "hash": "18dd6a8b0fed67ab",
-  "lastmod": "2026-09-17"
+  "hash": "47ffcd4ecf2f4aa0",
+  "lastmod": "2026-10-05"
  },
  "power-of-attorney": {
-  "hash": "f71a2b4d33d87cd4",
-  "lastmod": "2026-09-17"
+  "hash": "d8cf9f28850b9cc6",
+  "lastmod": "2026-10-05"
  },
  "privacy-policy": {
   "hash": "87b3c2f2bc17dc73",
   "lastmod": "2026-09-16"
  },
  "probate": {
-  "hash": "59e8b29351346086",
-  "lastmod": "2026-09-17"
+  "hash": "61611cfea1d2329f",
+  "lastmod": "2026-10-05"
+ },
+ "probate-attorney-charleston-sc": {
+  "hash": "5700a341290a9903",
+  "lastmod": "2026-10-05"
  },
  "probate-courts": {
-  "hash": "53fc53b98356e43f",
-  "lastmod": "2026-09-17"
+  "hash": "1d95f28994ab9992",
+  "lastmod": "2026-10-05"
  },
  "probate-process": {
-  "hash": "2d62a583fa154e6e",
-  "lastmod": "2026-09-17"
+  "hash": "061424afe1b9a729",
+  "lastmod": "2026-10-05"
  },
  "reviews": {
   "hash": "a3dcfd57cc37d2b3",
   "lastmod": "2026-09-17"
  },
  "revocable-trust": {
-  "hash": "728ee1ce36b024b2",
-  "lastmod": "2026-09-17"
+  "hash": "6151276721de94b0",
+  "lastmod": "2026-10-05"
  },
  "service-areas": {
-  "hash": "28bd1666ae3f87d0",
-  "lastmod": "2026-09-17"
+  "hash": "064e115481eaefd1",
+  "lastmod": "2026-10-05"
  },
  "service-areas/cane-bay": {
-  "hash": "aa8d74b388085784",
-  "lastmod": "2026-09-17"
+  "hash": "093857a9c1d5052f",
+  "lastmod": "2026-10-05"
  },
  "service-areas/carnes-crossroads": {
-  "hash": "ff9860bea4bd20b0",
-  "lastmod": "2026-09-17"
+  "hash": "e2ff032c53ff64c0",
+  "lastmod": "2026-10-05"
  },
  "service-areas/charleston": {
-  "hash": "8c5d2020fe5e8761",
-  "lastmod": "2026-09-17"
+  "hash": "8b55d1e49675263f",
+  "lastmod": "2026-10-05"
  },
  "service-areas/daniel-island": {
-  "hash": "414882d4803e2ea8",
-  "lastmod": "2026-09-17"
+  "hash": "0c4a8cbff659c8da",
+  "lastmod": "2026-10-05"
  },
  "service-areas/goose-creek": {
-  "hash": "b25be1958f568d19",
-  "lastmod": "2026-09-17"
+  "hash": "f37ddac21e5f8837",
+  "lastmod": "2026-10-05"
  },
  "service-areas/hanahan": {
-  "hash": "a8a1c5d712e8e954",
-  "lastmod": "2026-09-17"
+  "hash": "9a47ea5b525e9cdc",
+  "lastmod": "2026-10-05"
  },
  "service-areas/harleyville": {
-  "hash": "e30ff7c00f54d64d",
-  "lastmod": "2026-09-17"
+  "hash": "3d47b71b2c893d2c",
+  "lastmod": "2026-10-05"
  },
  "service-areas/hollywood": {
-  "hash": "08cf7d537baa0f9c",
-  "lastmod": "2026-09-17"
+  "hash": "11cea5787c3d7643",
+  "lastmod": "2026-10-05"
  },
  "service-areas/james-island": {
-  "hash": "50bb82d93a23c6be",
-  "lastmod": "2026-09-17"
+  "hash": "d0a0c20ca2f6ebf1",
+  "lastmod": "2026-10-05"
  },
  "service-areas/jedburg": {
-  "hash": "5dd7ade2b9b4eb5d",
-  "lastmod": "2026-09-17"
+  "hash": "573f9223c7bd8ab2",
+  "lastmod": "2026-10-05"
  },
  "service-areas/johns-island": {
-  "hash": "e9ccc33afe86fa2e",
-  "lastmod": "2026-09-17"
+  "hash": "a001a4cc5f7eb33d",
+  "lastmod": "2026-10-05"
  },
  "service-areas/knightsville": {
-  "hash": "b73521830795939b",
-  "lastmod": "2026-09-17"
+  "hash": "37bd249cc01d68d0",
+  "lastmod": "2026-10-05"
  },
  "service-areas/ladson": {
-  "hash": "9f910abaae273fcb",
-  "lastmod": "2026-09-17"
+  "hash": "264095dc866abb05",
+  "lastmod": "2026-10-05"
  },
  "service-areas/lincolnville": {
-  "hash": "92b7cde047a2f8aa",
-  "lastmod": "2026-09-17"
+  "hash": "dd8ea87e13f04684",
+  "lastmod": "2026-10-05"
  },
  "service-areas/moncks-corner": {
-  "hash": "1a0d58ca13f0f05a",
-  "lastmod": "2026-09-17"
+  "hash": "2915c8b40e8877ee",
+  "lastmod": "2026-10-05"
  },
  "service-areas/mount-pleasant": {
-  "hash": "54d9cad0ad6b1f09",
-  "lastmod": "2026-09-17"
+  "hash": "87cc25f165a90e0a",
+  "lastmod": "2026-10-05"
  },
  "service-areas/nexton": {
-  "hash": "68af9fd5795502c9",
-  "lastmod": "2026-09-17"
+  "hash": "3f68f46043a9a28e",
+  "lastmod": "2026-10-05"
  },
  "service-areas/north-charleston": {
-  "hash": "77c89159d271b307",
-  "lastmod": "2026-09-17"
+  "hash": "678e60268d8519a2",
+  "lastmod": "2026-10-05"
  },
  "service-areas/ravenel": {
-  "hash": "9f0255651012ccd7",
-  "lastmod": "2026-09-17"
+  "hash": "4d4eec13bbc2728f",
+  "lastmod": "2026-10-05"
  },
  "service-areas/reevesville": {
-  "hash": "edf47624a9e1a1e4",
-  "lastmod": "2026-09-17"
+  "hash": "d441c1436b6c86d0",
+  "lastmod": "2026-10-05"
  },
  "service-areas/ridgeville": {
-  "hash": "fc04705cf5004ec5",
-  "lastmod": "2026-09-17"
+  "hash": "d0f77f69238f1d57",
+  "lastmod": "2026-10-05"
  },
  "service-areas/sangaree": {
-  "hash": "bee985c4251a326f",
-  "lastmod": "2026-09-17"
+  "hash": "d5ff68052736f97b",
+  "lastmod": "2026-10-05"
  },
  "service-areas/st-george": {
-  "hash": "7e9ff382cfc232bb",
-  "lastmod": "2026-09-17"
+  "hash": "55a91129cbc9ad6c",
+  "lastmod": "2026-10-05"
  },
  "service-areas/summerville": {
-  "hash": "9639f39ec5a920e7",
-  "lastmod": "2026-09-17"
+  "hash": "8e83b489f160e6f0",
+  "lastmod": "2026-10-05"
  },
  "service-areas/walterboro": {
-  "hash": "04071f2d8d64d266",
-  "lastmod": "2026-09-17"
+  "hash": "f5f1f972990213af",
+  "lastmod": "2026-10-05"
  },
  "service-areas/west-ashley": {
-  "hash": "62a4ad8962ec5856",
-  "lastmod": "2026-09-17"
+  "hash": "63ca1acad6c3cc60",
+  "lastmod": "2026-10-05"
  },
  "small-estate-affidavit": {
-  "hash": "354b4ec785f74690",
-  "lastmod": "2026-09-17"
+  "hash": "4f8baf16a0d3735e",
+  "lastmod": "2026-10-05"
+ },
+ "south-carolina-eviction-process": {
+  "hash": "c8bbafc6f477c606",
+  "lastmod": "2026-10-05"
+ },
+ "south-carolina-security-deposit-law": {
+  "hash": "531c1066f7da9ab5",
+  "lastmod": "2026-10-05"
  },
  "special-needs-planning": {
-  "hash": "246694e0556d00d4",
-  "lastmod": "2026-09-17"
+  "hash": "5768fcb54b9cbff7",
+  "lastmod": "2026-10-05"
  },
  "team/cassie-snyder": {
-  "hash": "a48901c824f8b5f2",
-  "lastmod": "2026-09-17"
+  "hash": "9a464adfa9f23bf4",
+  "lastmod": "2026-10-05"
  },
  "terms-of-use": {
   "hash": "551c95008d565de2",
@@ -300,15 +336,15 @@
   "lastmod": "2026-09-16"
  },
  "traffic-tickets": {
-  "hash": "65d0a85045fd8154",
-  "lastmod": "2026-09-17"
+  "hash": "e53383a758a234dc",
+  "lastmod": "2026-10-05"
  },
  "trust-administration": {
-  "hash": "6603dd036526b49c",
-  "lastmod": "2026-09-17"
+  "hash": "d7c7f27a9e2e2f2b",
+  "lastmod": "2026-10-05"
  },
  "will-contests": {
-  "hash": "506729ca834bbeae",
-  "lastmod": "2026-09-17"
+  "hash": "a8a85667c08c607c",
+  "lastmod": "2026-10-05"
  }
 }

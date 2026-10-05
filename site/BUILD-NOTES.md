@@ -1,6 +1,6 @@
 # frostlawgroupsc.com rebuild — build notes and recommendations
 
-`website/` is a complete, deployable rebuild of frostlawgroupsc.com: 77 static pages, one stylesheet, self-hosted fonts, a sitemap, robots.txt, an `.htaccess` with the redirect map from the search audit (for Apache hosts), and `llms.txt`; `vercel.json` at the repository root carries the same rules for Vercel. The folder is generated from `site/` (`python3 site/build_site.py`), so copy changes go in the content files, not in the output. These notes stay in `site/` and are not published with the site.
+`website/` is a complete, deployable rebuild of frostlawgroupsc.com: 87 static pages, one stylesheet, self-hosted fonts, a sitemap, robots.txt, an `.htaccess` with the redirect map from the search audit (for Apache hosts), and `llms.txt`; `vercel.json` at the repository root carries the same rules for Vercel. The folder is generated from `site/` (`python3 site/build_site.py`), so copy changes go in the content files, not in the output. These notes stay in `site/` and are not published with the site.
 
 ## What changed versus the current site
 
@@ -33,6 +33,17 @@
 **City pages.** 26 of them under `/service-areas/`. Each is built from verified facts that genuinely differ by town — which county, which probate court, which magistrate or municipal court, where the bond hearing is held, distance and route to the office, ZIP codes, population, landmarks — plus a hand-written local angle. That is what keeps them from being doorway pages.
 
 **Local-news blog.** Eight articles, each tied to a recurring news theme (growth, hurricane season, expungement clinics, back-to-school enforcement, domestic-violence arrest reports, the county line) and each linking out to the original reporting (Post and Courier / Journal Scene / Berkeley Independent, Live 5, ABC News 4, WCBD, county and town news pages) and to the community threads where people ask the question (Nextdoor city pages, r/Charleston, r/SummervilleSC, r/southcarolina — those links carry `rel="nofollow"`). Every legal statement links to the statute on scstatehouse.gov.
+
+## October 2026 content release (statewide pages, county guides, landlord-tenant)
+
+Driven by the Search Console and keyword data in the OpenSEO project: the firm already ranked on page one or two for several statewide informational queries with thin pages, and had no page at all for the court-name and landlord-tenant searches people in the tri-county area actually type.
+
+- **New practice lane: landlord-tenant.** `site/content/landlord.py` adds the hub `/eviction-lawyer-summerville-sc/` (Service schema, Tara as the attorney; she sat as a Dorchester County magistrate, the court that hears every eviction) and two statewide spokes, `/south-carolina-eviction-process/` and `/south-carolina-security-deposit-law/`. Wired into the header menu ("Landlord-Tenant"), the footer, the home page practice cards (now a 3 + 2 grid), the city pages' "How we help" lists, the sidebar lists, `llms.txt` and the home FAQ. Statute keys `rlta`, `ejectment` and `magistrate_civil` were added to `local_data.json`; every figure (five-day and fourteen-day notices, ten days to show cause, writ within five days, twenty-four hours to vacate, $40 filing fee, treble damages) was checked against scstatehouse.gov and the county magistrate pages.
+- **County probate court guides.** `/dorchester-county-probate-court/`, `/berkeley-county-probate-court/` and `/charleston-county-probate-court/` (address, hours, intake routine, forms 300ES/305ES/341ES/350ES/400ES/420ES, the § 8-21-770 fee tiers, timelines, "do you need a lawyer"), with `/probate-courts/` rewritten as the overview that links to them. Daniel Island is Berkeley County; the old overview said Charleston and has been corrected.
+- **Guardianship of minors** (`/guardianship-of-minors/`): Family Court appoints the guardian of the person, probate court the conservator; the § 62-5-433 settlement tiers ($2,500 / $25,000) verified against the statute text.
+- **Charleston pages**: `/probate-attorney-charleston-sc/` and `/estate-planning-attorney-charleston-sc/`, spokes of their hubs, distinct from the `/service-areas/charleston/` city page.
+- **Statewide rewrites of existing spokes** so each owns its query: first-offense DUI (penalty table by breath result, the 2024 all-offender interlock rule), domestic violence by degree, expungement (fees, waits, correct circuits), driving under suspension, bench warrants, power of attorney (the § 62-8-109(c) recording rule), living will (the § 44-77-40 witness rules), small estate affidavit (the $45,000 limit and Form 420ES).
+- `meta.py` holds the final titles (≤ 64 characters) and descriptions (≤ 160) for every new and rewritten page; the inline titles in the content files are longer working titles that META overrides.
 
 ## Blog authorship: split them, by expertise, with a "reviewed by" line
 

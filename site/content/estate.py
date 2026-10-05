@@ -125,55 +125,107 @@ sp("revocable-trust",
    related=["last-will-and-testament", "asset-protection-trusts", "trust-administration"])
 
 sp("power-of-attorney",
-   title="Power of Attorney Lawyer in Summerville, SC | Durable & Health Care POA",
-   description="South Carolina durable and health care powers of attorney explained: what each agent can do, the Uniform Power of Attorney Act's recording rule, and how to choose agents. Summerville attorneys.",
-   h1="Powers of Attorney in Summerville, SC", nav_label="Powers of attorney",
-   lead="A durable power of attorney covers your finances and legal matters; a health care power of attorney names someone to make medical decisions. Both are essential when you cannot act for yourself.",
-   summary="Financial and medical decision-makers, named by you and ready before a crisis.",
+   title="Power of Attorney in South Carolina | Durable, Health Care and the Recording Rule",
+   description="How a South Carolina power of attorney works: two witnesses and a notary under § 62-8-105, the recording rule before an agent acts after incapacity, what an agent can and cannot do, and the health care power of attorney.",
+   h1="Power of Attorney in South Carolina: Durable, Health Care and the Recording Rule", nav_label="Powers of attorney",
+   lead="A durable power of attorney covers your money and property. A health care power of attorney covers your medical decisions. South Carolina has specific rules for signing and recording each, and a form that misses one of them fails on the day it is needed.",
+   summary="Signing and recording rules, what an agent can and cannot do, and the health care power of attorney.",
    body=(
-       answer("Yes—Frost Law Group prepares durable (financial) powers of attorney, health care powers of attorney and living wills for Summerville families, usually as a set with a will or trust, and records the durable POA when the time comes.", "Which Summerville law firms help with living wills and powers of attorney?")
-       + '<h2>Planning for the unexpected</h2>'
-       '<p>If an accident or illness leaves you unable to manage your affairs, someone has to pay the mortgage, deal with the insurance company and talk to your doctors. Without powers of attorney, that someone must first ask the probate court to appoint a conservator and guardian—a public, expensive process that takes months. Two signatures now avoid it.</p>'
-       '<h2>Durable power of attorney</h2>'
-       f'<p>South Carolina\'s {cite("poa_act", "Uniform Power of Attorney Act (S.C. Code Title 62, Article 8)")} governs financial powers of attorney. “Durable” means it keeps working after you lose capacity. Your agent can:</p>'
-       + checks(["Pay bills, manage accounts and file tax returns", "Handle real estate, including selling a home to pay for care", "Deal with insurance, retirement plans and government benefits", "Run or wind down a business", "Make gifts and continue your estate plan—only if you specifically grant those powers"]) +
-       f'<p>Two South Carolina wrinkles matter. First, a durable POA must be recorded with the register of deeds in your county before your agent can act once you are incapacitated, so we prepare it in recordable form. Second, banks may refuse old or generic forms; a document drafted under the current Act with the powers spelled out is honored far more readily.</p>'
+       answer(f"A financial power of attorney in South Carolina is governed by the {cite('poa_act', 'Uniform Power of Attorney Act')}, in force since January 1, 2017. It must be signed by you, witnessed by two people and acknowledged before a notary, the same formality as a will, and it is durable (it survives your incapacity) unless it says otherwise. One rule catches most families off guard: after you become incapacitated, your agent may use the document only if it has been recorded with the register of deeds in the county where you live. A health care power of attorney is a separate document under {cite('hcpoa', 'S.C. Code § 62-5-503')} with its own witness rules. Frost Law Group prepares both as a set, usually with a will or trust, and records the financial one so it is ready when it is needed.", "The short answer")
+       + '<h2>Two documents, two jobs</h2>'
+       f'<p>A <b>durable power of attorney</b> names an agent to handle money and property: paying bills, managing accounts, dealing with insurance and benefits, and signing for you at a closing. A <b>health care power of attorney</b> names an agent to make medical decisions when you cannot speak for yourself, and it works alongside a {A("living-will", "living will")}. Most people need both, and the agents need not be the same person. Without them, the only route to a decision-maker is a {A("guardianship-and-conservatorship", "guardianship or conservatorship")} in probate court: public, slow and expensive.</p>'
+       '<h2>How to sign a power of attorney in South Carolina</h2>'
+       f'<p>{cite("poa_act", "S.C. Code § 62-8-105")} sets the formalities for a financial power of attorney:</p>'
+       + checks([
+           "<b>In writing and signed by you</b>, or by someone else in your presence and at your direction if you cannot physically sign.",
+           "<b>Two witnesses</b>, with the same requirements as a South Carolina will. Your agent should not be one of them.",
+           "<b>Acknowledged before a notary.</b> The acknowledgment is what makes the document recordable, and recording is required before an agent can act after you are incapacitated.",
+           "<b>Durable by default.</b> Under § 62-8-104, a power of attorney signed under the Act keeps working after you lose capacity unless it expressly says it ends then.",
+           "<b>Effective when signed unless you make it “springing.”</b> A springing power takes effect only when a physician or licensed psychologist states in writing that you are incapacitated (§ 62-8-109), unless the document names someone else to make that call."]) +
+       '<p>Powers of attorney signed before 2017 remain valid if they were valid when signed, and a power of attorney signed in another state is honored here if it complied with that state’s law (§ 62-8-106). The recording rule below still applies to all of them.</p>'
+       '<h2>The recording rule most forms ignore</h2>'
+       '<p>Under § 62-8-109(c), once you are incapacitated your agent may exercise the authority in the document <b>only if it has been recorded in the same manner as a deed</b> in the county where you reside. It can be recorded before or after incapacity, and most families should simply record it at signing: the Dorchester County Register of Deeds in St. George, the Berkeley County Register of Deeds in Moncks Corner, or the Charleston County Register of Deeds at 101 Meeting Street. The fee is modest, and the recorded copy is what a bank or a title company will eventually ask to see. If a recorded power of attorney is later revoked, the revocation should be recorded the same way so the public record is accurate.</p>'
+       '<p>A power of attorney that is never recorded is not void, but at the moment it matters, when a parent has had a stroke and the mortgage is due, the agent has no authority until someone finds the original, has it recorded and waits for the recorded copy. We prepare every financial power of attorney in recordable form and can record it the week it is signed.</p>'
+       '<h2>What your agent can do, and what needs express words</h2>'
+       '<p>The Act lists the subjects an agent may be given general authority over: real property, tangible personal property, stocks and bonds, banks and other financial institutions, business operations, insurance and annuities, estates and trusts, claims and litigation, personal and family maintenance, government benefits, retirement plans and taxes. Several powers are so easily abused that § 62-8-201 requires the document to grant them expressly, in so many words:</p>'
+       + checks(["Creating, amending, revoking or terminating a trust",
+                 "Making a gift, including a gift to the agent",
+                 "Creating or changing rights of survivorship on an account",
+                 "Creating or changing a beneficiary designation",
+                 "Delegating authority to someone else",
+                 "Waiving your right to be a beneficiary of a joint and survivor annuity or a retirement plan",
+                 "Disclaiming an inheritance or other property"]) +
+       '<p>Even when gifts are authorized, § 62-8-217 limits them to the federal annual exclusion amount per person unless the document says otherwise. This is where a generic internet form does the most damage: either it grants nothing, and the agent cannot continue your estate plan or qualify you for benefits, or it grants everything, and an agent can empty the accounts.</p>'
+       '<h2>Your agent’s duties</h2>'
+       '<p>An agent who accepts the role must act in good faith, within the authority granted and in your best interest; keep your property separate from the agent’s own; keep records of every receipt, disbursement and transaction; cooperate with your health care agent; and try to preserve your estate plan (§ 62-8-114). An agent who breaches those duties can be ordered to account and to restore what was lost, and family members, the named successor agent and others listed in § 62-8-116 can ask the probate court to review the agent’s conduct.</p>'
+       '<h2>When a bank will not accept it</h2>'
+       '<p>The Act answers the problem of banks demanding their own forms. A person presented with an acknowledged power of attorney may ask for an agent’s certification, a translation or an opinion of counsel, but a refusal without a legally recognized reason exposes that person to a court order compelling acceptance and to attorney’s fees (§§ 62-8-119 and 62-8-120). In practice, a current document drafted under the Act with the powers spelled out, plus a recorded copy, is accepted far more readily than an old or generic form.</p>'
        '<h2>Health care power of attorney</h2>'
-       f'<p>A health care power of attorney under {cite("hcpoa", "S.C. Code §§ 62-5-503 and 62-5-504")} names an agent to make medical decisions when you cannot, including consent to treatment, choice of providers and facilities, access to your records, and end-of-life decisions consistent with your {A("living-will", "living will")}. It can also state your wishes about organ donation and funeral arrangements.</p>'
+       f'<p>A health care power of attorney must substantially follow the statutory form in {cite("hcpoa", "S.C. Code § 62-5-504")} and be signed by you and by two witnesses, each of whom declares that they are not related to you by blood, marriage or adoption, not responsible for your medical bills, not your heir or beneficiary, not your agent, and not your attending physician or the physician’s employee; no more than one witness may work for the facility where you are a patient. Notarization is optional under the statute, though we notarize every one so it is accepted without question in other states. The agent must be an adult and generally may not be your health care provider or the provider’s employee.</p>'
+       f'<p>The document lets your agent consent to or refuse treatment, choose providers and facilities, see your medical records (it includes the HIPAA authorization), and make end-of-life decisions consistent with your {A("living-will", "living will")}. It can also state your wishes about organ donation and funeral arrangements, and it names a successor agent if the first cannot serve.</p>'
        '<h2>Choosing your agents</h2>'
-       '<p>Pick people, not titles. The financial agent should be organized and honest; the health care agent should be able to sit in a hospital hallway and say the hard thing you told them to say. They need not be the same person, and each should have an alternate. Adult children who live nearby are common choices; so is a trusted friend when children live far away or do not get along.</p>'
-       + callout("<b>Frost first:</b> if a hospital or nursing facility hands you a power of attorney form to sign for a parent, call before signing. Some forms limit the agent to that facility; others grant powers the family never discussed.")
-       + band("Put the right people in place.", "Powers of attorney are included in every plan we prepare and can be done on their own.")
+       '<p>Pick people, not titles. The financial agent should be organized and honest; the health care agent should be able to sit in a hospital hallway and say the hard thing you told them to say. They need not be the same person, and each should have an alternate. Adult children who live nearby are common choices; so is a trusted friend when children live far away or do not get along. Co-agents who must act together sound safe and are a practical nightmare when one is unreachable; we usually recommend one agent at a time with a named successor.</p>'
+       '<h2>Revoking or replacing an old power of attorney</h2>'
+       '<p>You can revoke a power of attorney at any time while you have capacity by signing a written revocation, delivering it to the agent and to every bank or institution that has a copy, and recording it if the original was recorded. Signing a new power of attorney does not automatically revoke an old one unless it says so, which is one reason to have an attorney review documents from before 2017, from another state, or from a form service.</p>'
+       + callout("<b>Frost first:</b> if a hospital, nursing facility or bank hands you a power of attorney form to sign for a parent, call before signing. Some forms limit the agent to that institution; others grant powers the family never discussed; and a parent who still has capacity may be able to sign a far better document.")
+       + band("Put the right people in place.", "Powers of attorney are included in every plan we prepare and can be done on their own, usually in one meeting.")
    ),
    faqs=[
-       ("When does a power of attorney take effect?", "You choose: immediately, or only when a physician certifies incapacity (a “springing” POA). Immediate powers are simpler for banks; springing powers appeal to people who want control until they truly need help."),
+       ("Does a power of attorney have to be notarized in South Carolina?", "A financial power of attorney must be signed by the principal, witnessed by two people and acknowledged before a notary. A health care power of attorney needs two qualified witnesses; the notary section of the statutory form is optional."),
+       ("Does a power of attorney have to be recorded in South Carolina?", "Only before the agent acts after the principal becomes incapacitated, under § 62-8-109(c). It is recorded like a deed with the register of deeds in the county where the principal lives. We recommend recording it at signing so it is ready when needed."),
+       ("Can an agent sell my house with a power of attorney?", "Yes, if the document grants authority over real property and has been recorded in the county where the property is located. The closing attorney will want the recorded copy and often an agent’s certification."),
+       ("Is a power of attorney from another state valid in South Carolina?", "Generally yes, if it was valid under the law of the state where it was signed. The South Carolina recording rule still applies, and banks here are more comfortable with a document that tracks the South Carolina Act. New residents usually re-sign."),
+       ("When does a power of attorney take effect?", "When it is signed, unless you make it springing, in which case a physician or licensed psychologist must state in writing that you are incapacitated. Immediate powers are simpler for banks; springing powers appeal to people who want control until they truly need help."),
        ("Does a power of attorney end at death?", f"Yes. At death the personal representative named in the will, or the successor trustee, takes over. See {A('probate', 'probate')}."),
-       ("Can my agent change my will?", "No. An agent can never make or change a will. Gifts and beneficiary changes are allowed only if the document expressly permits them."),
+       ("Can my agent change my will or make gifts?", "An agent can never make or change a will. Gifts, beneficiary changes, survivorship changes and trust changes are allowed only if the document expressly grants them, and gifts are capped at the annual exclusion unless the document says otherwise."),
    ],
-   related=["living-will", "guardianship-and-conservatorship", "last-will-and-testament"])
+   related=["living-will", "guardianship-and-conservatorship", "estate-plan-review"])
 
 sp("living-will",
-   title="Living Will Attorney in Summerville, SC | Declaration of a Desire for a Natural Death",
-   description="A South Carolina living will (Declaration of a Desire for a Natural Death) records your end-of-life wishes so family and physicians know them. Summerville attorneys explain when it applies and how it works with a health care POA.",
-   h1="Living Will in Summerville, SC", nav_label="Living will",
-   lead="Document your end-of-life care preferences—from life support to artificial nutrition—so your family and physicians know exactly what you want before a crisis arises.",
-   summary="Your end-of-life wishes, in the form South Carolina hospitals recognize.",
+   title="Living Will in South Carolina | Declaration of a Desire for a Natural Death",
+   description="How a South Carolina living will works: the Declaration of a Desire for a Natural Death under § 44-77-10, who may witness it, when physicians follow it, and how it differs from a DNR and a health care power of attorney.",
+   h1="Living Will in South Carolina: The Declaration of a Desire for a Natural Death", nav_label="Living will",
+   lead="A living will tells your physicians, in advance, whether you want life-sustaining treatment if you are dying or permanently unconscious. South Carolina gives it a formal name, a statutory form and strict signing rules.",
+   summary="What the declaration covers, the witness and notary rules, when it takes effect and how it works with a health care POA.",
    body=(
-       '<h2>What a living will is</h2>'
-       f'<p>In South Carolina, a living will is formally a Declaration of a Desire for a Natural Death under the {cite("living_will_act", "Death with Dignity Act (S.C. Code § 44-77-10 et seq.)")}. It tells physicians whether you want life-sustaining procedures withheld or withdrawn if you have a terminal condition or are permanently unconscious, and whether artificial nutrition and hydration should be provided. It speaks only when you cannot.</p>'
-       '<h2>What a living will can address</h2>'
-       + checks(["Mechanical ventilation and other life-sustaining procedures", "Artificial nutrition and hydration (feeding tubes)", "Comfort care and pain relief, which continue regardless of your other choices", "Organ and tissue donation wishes, which we usually also place in the health care POA"]) +
-       '<h2>When it takes effect</h2>'
-       '<p>The declaration applies only after your attending physician and a second physician determine that you have a terminal condition or are permanently unconscious, and only if you cannot make decisions yourself. Until then, you decide—and you can revoke it at any time, in any way that shows your intent.</p>'
-       '<h2>Living will + health care power of attorney</h2>'
-       f'<p>The two documents work together. The living will states your wishes for the narrow end-of-life situation the statute covers; the {A("power-of-attorney", "health care power of attorney")} names a person to make every other medical decision and to enforce the living will if a facility hesitates. Families with both rarely end up in the emergency-room disputes families without them do.</p>'
-       '<h2>Signing it correctly</h2>'
-       '<p>South Carolina\'s statutory form requires witnesses who are not related to you, not your heirs, and not your health care providers, and the declaration must be acknowledged before a notary. We handle the signing at our office so the document will be honored at Summerville Medical Center, Trident, MUSC, Roper St. Francis or wherever you are treated.</p>'
-       + band("Speak for yourself before you can't.", "A living will and health care power of attorney take one short meeting.")
+       answer(f"In South Carolina a living will is formally a Declaration of a Desire for a Natural Death under the {cite('living_will_act', 'Death with Dignity Act, S.C. Code § 44-77-10 et seq.')} It directs that life-sustaining procedures be withheld or withdrawn if you have a terminal condition or are permanently unconscious, and it lets you say whether you want artificial nutrition and hydration in those situations. To be valid it must substantially follow the statutory form in § 44-77-50 and be dated and signed in the presence of a notary and two qualified witnesses (§ 44-77-40). It speaks only when you cannot; until then, you decide, and you can revoke it at any time.", "The short answer")
+       + '<h2>What a living will does, and what it does not</h2>'
+       '<p>The declaration covers one narrow situation: you have a terminal condition, or you are permanently unconscious, and you cannot make your own decisions. In that situation it tells your physicians not to use procedures that would only prolong the dying process. It does not cover a routine surgery, a treatable illness or a temporary coma, and it never withholds comfort care: medication and procedures to keep you comfortable continue regardless of your other choices.</p>'
+       f'<p>It is also not a do-not-resuscitate order, and it is not a {A("power-of-attorney", "health care power of attorney")}. The health care power of attorney names a person to make every other medical decision and to enforce the living will if a facility hesitates. The two documents are designed to be signed together.</p>'
+       '<h2>What the declaration can say</h2>'
+       + checks(["Whether life-sustaining procedures such as mechanical ventilation, dialysis and cardiopulmonary resuscitation should be withheld or withdrawn once your condition is certified",
+                 "Whether artificial nutrition and hydration (feeding tubes and IV fluids) should be provided; you may answer differently for a terminal condition and for permanent unconsciousness, and the form requires a specific choice",
+                 "That comfort care and pain relief continue",
+                 "Your wishes about organ and tissue donation, which we usually also place in the health care power of attorney"]) +
+       '<h2>Signing it so it counts</h2>'
+       f'<p>{cite("living_will_act", "S.C. Code § 44-77-40")} is strict, and a declaration that misses a requirement can be set aside at the moment it is needed. The declaration must be dated and signed by you in the presence of a notary (or another officer authorized to administer oaths) and two witnesses, one of whom may be the notary. Each witness must affirm that they:</p>'
+       + checks(["are not related to you by blood, marriage or adoption",
+                 "are not entitled to any portion of your estate, under your will or by intestacy, and have no claim against it",
+                 "are not directly financially responsible for your medical care",
+                 "are not your attending physician or the physician’s employee",
+                 "are not, if there is more than one such witness, employees of the health facility where you are a patient"]) +
+       '<p>If you sign while you are a patient in a hospital or a resident of a nursing care facility, one of the witnesses must be an ombudsman designated by the State Ombudsman in the Office of the Governor. That rule exists to protect patients, and it is why we strongly prefer to sign these documents at our office, while you are well, rather than at a bedside.</p>'
+       '<h2>When physicians follow it</h2>'
+       '<p>The declaration becomes operative only after your attending physician determines that you are in a terminal condition or permanently unconscious, with the concurrence of a second physician who has examined you, and only while you are unable to make decisions. A declaration has no effect during a pregnancy. Until those conditions are met, your physicians treat you normally and take direction from you or your health care agent.</p>'
+       '<h2>Revoking it</h2>'
+       '<p>You may revoke the declaration at any time and in any manner that shows your intent: destroying it, signing a written revocation, or simply telling your physician. A revocation is effective once it is communicated to the attending physician. A later declaration replaces an earlier one.</p>'
+       '<h2>Living will, health care POA, DNR and POST</h2>'
+       + table(["Document", "Who signs it", "What it does"], [
+           ["Living will (Declaration of a Desire for a Natural Death)", "You, before a notary and two witnesses", "States your own wishes about life-sustaining treatment in a terminal condition or permanent unconsciousness"],
+           ["Health care power of attorney", "You, before two witnesses", "Names a person to make every other medical decision and to carry out your living will"],
+           ["Do-not-resuscitate (DNR) order", "Your physician", "A medical order not to attempt CPR; emergency responders follow it"],
+           ["POST form (Physician Orders for Scope of Treatment)", "Your physician, with you", "Portable medical orders for a seriously ill patient, honored across care settings"],
+       ]) +
+       '<h2>Where to keep it</h2>'
+       '<p>Give copies to your health care agent, your physicians and the hospital system you use, whether that is Summerville Medical Center, Trident, Roper St. Francis or MUSC, so it is in your chart before a crisis. Keep the original with your other estate documents and tell your agent where it is. Review it after a serious diagnosis, a move from another state, or a change in the people you have named.</p>'
+       + band("Speak for yourself before you can’t.", "A living will and health care power of attorney take one short meeting, and they are included in every estate plan we prepare.")
    ),
    faqs=[
-       ("Is a living will the same as a DNR?", "No. A do-not-resuscitate order is a physician's order about CPR in an emergency; a living will is your own statement about life-sustaining treatment in a terminal condition. Many people have both."),
-       ("Will paramedics follow my living will?", "Emergency responders follow physician orders (such as a DNR or POST form), not a living will. The living will guides hospital decisions once your condition is assessed."),
+       ("Is a living will the same as a DNR?", "No. A do-not-resuscitate order is a physician’s order about CPR in an emergency; a living will is your own statement about life-sustaining treatment in a terminal condition or permanent unconsciousness. Many people have both."),
+       ("Does a living will need to be notarized in South Carolina?", "Yes. The declaration must be signed in the presence of an officer authorized to administer oaths, such as a notary, and two witnesses who meet the statute’s requirements. The notary may serve as one of the witnesses."),
+       ("Will paramedics follow my living will?", "Emergency responders follow physician orders, such as a DNR or POST form, not a living will. The living will guides hospital decisions once your condition is assessed and certified."),
+       ("Can my family override my living will?", "Not legally. A valid declaration controls, and your health care agent’s job is to see that it is followed. In practice hospitals listen to families, which is why naming a strong agent and telling your family what you decided matters as much as the paper."),
+       ("Does a living will from another state work in South Carolina?", "Often it is honored, but South Carolina’s witness and notary rules are specific and a facility may hesitate. New residents should sign a South Carolina declaration; it takes minutes."),
    ],
    related=["power-of-attorney", "last-will-and-testament", "estate-plan-review"])
 
@@ -399,3 +451,40 @@ sp("high-net-worth-estate-planning", card_new=True,
        ("Do I need a corporate trustee?", "Not always. Many families name a relative with a professional co-trustee or an advisor as “trust protector.” We match the trustee to the assets."),
    ],
    related=["asset-protection-trusts", "estate-planning-for-business-owners", "trust-administration"])
+
+
+sp("estate-planning-attorney-charleston-sc", card_new=True,
+   title="Estate Planning Attorney Serving Charleston, SC | Wills, Trusts and Powers of Attorney",
+   description="Wills, revocable living trusts, powers of attorney and living wills for Charleston County families, from attorneys thirty minutes up I-26. Recording at the Charleston Register of Deeds, coastal property, new residents and the Charleston County Probate Court.",
+   h1="Estate Planning Attorney Serving Charleston, SC", nav_label="Charleston estate planning", eyebrow="Estate planning · Charleston County",
+   lead="Downtown, Mount Pleasant, West Ashley, James Island, Johns Island and North Charleston families work with us on plans written for South Carolina law and for the Charleston County court that will eventually read them.",
+   summary="Wills, trusts and powers of attorney for Charleston County families, with Charleston-specific recording and probate details.",
+   body=(
+       answer(f"Frost Law Group prepares wills, revocable living trusts, durable and health care powers of attorney and living wills for families throughout Charleston County. Our office is in Summerville, about thirty minutes from downtown Charleston on I-26, and we meet by phone or video when that is easier. Tara Frost served as a Dorchester County Associate Probate Judge; she drafts every plan with the {A('charleston-county-probate-court', 'Charleston County Probate Court')} in mind, because that is where a Charleston will is eventually proved.", "The short answer")
+       + '<h2>What a Charleston estate plan has to handle</h2>'
+       + checks([
+           f"<b>Coastal real estate.</b> A primary home on James Island, a rental in North Charleston, a second home on Isle of Palms: each parcel titled in your own name goes through probate, and the estate fee is charged on the inventory value ({cite('probate_fees', 'S.C. Code § 8-21-770')}: $95 plus 0.15 percent of the value between $100,000 and $600,000, and 0.25 percent above that). A {A('revocable-trust', 'revocable living trust')} funded with deeds recorded at the Charleston County Register of Deeds keeps that property out of the court entirely.",
+           f"<b>Powers of attorney that will actually work.</b> Under the Uniform Power of Attorney Act a financial {A('power-of-attorney', 'power of attorney')} must be recorded like a deed in the county where you live before your agent can act after you are incapacitated. For Charleston County residents that is the Register of Deeds at 101 Meeting Street. We prepare the document in recordable form and record it.",
+           "<b>New residents.</b> A will validly signed in another state is generally valid here, but powers of attorney, health care documents and trust funding rarely survive the move intact, and South Carolina’s intestacy rules differ from most states’. Retirees arriving in Mount Pleasant and West Ashley make up a large share of our plan reviews.",
+           f"<b>Blended families.</b> Second marriages are common in a retirement destination. Without a plan, a surviving spouse takes half the estate when there are children from a prior marriage, and the elective share lets a spouse claim one-third regardless of the will. Our {A('estate-planning-for-blended-families', 'blended-family planning')} page explains the trust structures that provide for both.",
+           f"<b>Business owners.</b> Restaurants, contractors, medical practices and short-term rental businesses need {A('estate-planning-for-business-owners', 'succession terms')} that keep the business operating the week after a death.",
+           "<b>Military families.</b> Joint Base Charleston households have survivor benefits, SGLI designations and frequent moves that a plan must account for; Jack’s fourteen years in law enforcement give him a feel for first-responder and military benefits in particular."]) +
+       '<h2>What we prepare</h2>'
+       '[[cards:last-will-and-testament,revocable-trust,power-of-attorney,living-will]]'
+       '<h2>How it works from Charleston</h2>'
+       + steps([
+           ("A conversation.", " By phone, by video, or at our office at 128 Linwood Lane in Summerville, about thirty minutes from Broad Street and twenty from Park Circle. You leave with a recommendation and a flat-fee quote."),
+           ("Drafting.", " We draft and send a plain-English summary of what each document does. Changes are part of the price."),
+           ("Signing.", " South Carolina requires two witnesses and a notary for a will to be self-proved and for a power of attorney to be recordable. We handle the signing at our office, or we can arrange a signing closer to you."),
+           ("Recording and funding.", " Deeds to a trust and powers of attorney are recorded at the Charleston County Register of Deeds. We give you a funding checklist and letters for your financial institutions."),
+       ]) +
+       '<h2>The Charleston County Probate Court, briefly</h2>'
+       f'<p>Charleston County estates are opened at the Probate Court’s Estate Division on the third floor of the Historic Courthouse at 84 Broad Street, which accepts filings electronically through its EZ-Filing system and offers free estate workshops. Our {A("charleston-county-probate-court", "guide to the Charleston County Probate Court")} walks through fees, forms and timelines, and our {A("probate-attorney-charleston-sc", "Charleston probate page")} explains how we handle estates there. The best plan is the one that keeps your family out of that building, or gets them through it in a single visit.</p>'
+       + band("Planning from Charleston County?", "Call us. We will tell you what your family needs, what it costs, and whether a trust is worth it for your property.")
+   ),
+   faqs=[
+       ("Do I have to come to Summerville to sign?", "No. We meet by phone or video and arrange signings with the witnesses and notary South Carolina requires. Most Charleston clients come once, for the signing, and many find the drive from Mount Pleasant or West Ashley shorter than they expected."),
+       ("Where is a Charleston County power of attorney recorded?", "At the Charleston County Register of Deeds, 101 Meeting Street, Charleston. Recording is required before an agent may act after the principal becomes incapacitated, and we recommend doing it at signing."),
+       ("Does a trust avoid Charleston County probate?", "Yes, for everything titled in the trust. Real estate must be deeded to the trust and recorded; accounts must be retitled or given beneficiary designations. Anything left in your own name still goes through the Probate Court, which is why funding matters as much as drafting."),
+   ],
+   related=["revocable-trust", "power-of-attorney", "probate-attorney-charleston-sc"])

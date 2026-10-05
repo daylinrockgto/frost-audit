@@ -32,6 +32,7 @@ import content.core  # noqa: E402,F401  (registers pages)
 import content.estate  # noqa: E402,F401
 import content.probate  # noqa: E402,F401
 import content.criminal  # noqa: E402,F401
+import content.landlord  # noqa: E402,F401
 import content.cities  # noqa: E402,F401
 import content.posts  # noqa: E402,F401
 
@@ -312,7 +313,7 @@ def nav_html():
         else:
             href = url(hub_slug) if hub_slug in BY_SLUG else hub_slug
             items.append(f'<li><a href="{esc(href)}">{label}</a></li>')
-    items.append(f'<li class="cta"><a class="btn sm" href="{url("contact-us")}">Contact us</a></li>')
+    items.append(f'<li class="cta"><a class="btn sm" href="{url("contact-us")}">Contact</a></li>')
     return f'<nav class="nav" id="nav" aria-label="Main"><ul>{"".join(items)}</ul></nav>'
 
 
@@ -452,7 +453,7 @@ def aside_html(p):
         same = [c for c in PAGES if c["kind"] == "city" and c["county"] == p["county"] and c["slug"] != p["slug"]]
         lis = "".join(f'<li><a href="{url(c["slug"])}">{esc(c["nav_label"])}</a></li>' for c in sorted(same, key=lambda x: x["nav_label"])[:9])
         cards_.append(f'<div class="acard"><h3>Also serving {esc(p["county"])}</h3><ul>{lis}<li><a href="{url("service-areas")}">All service areas →</a></li></ul></div>')
-        lis2 = "".join(f'<li><a href="{url(s)}">{esc(BY_SLUG[s]["nav_label"])}</a></li>' for s in ("estate-planning-attorney", "probate", "criminal-defense"))
+        lis2 = "".join(f'<li><a href="{url(s)}">{esc(BY_SLUG[s]["nav_label"])}</a></li>' for s in ("estate-planning-attorney", "probate", "criminal-defense", "eviction-lawyer-summerville-sc"))
         cards_.append(f'<div class="acard"><h3>What we handle</h3><ul>{lis2}<li><a href="{esc(firm.PI_SITE)}" rel="noopener">Personal injury (separate site)</a></li></ul></div>')
     elif p["kind"] == "post":
         a = firm.ATTORNEYS[p["author"]]
@@ -467,7 +468,7 @@ def aside_html(p):
         cards_.append(f'<div class="acard"><h3>Also on the team</h3><div class="person">{img_tag(o["headshot"], o["name"])}<div><b><a href="{url(o["slug"])}" style="text-decoration:none">{esc(o["name"])}</a></b><small>{esc(o["byline"])}</small></div></div>'
                       f'<div class="person" style="margin-top:.9rem">{img_tag(c["photo"], c["alt"])}<div><b><a href="{url(c["slug"])}" style="text-decoration:none">{esc(c["name"])}</a></b><small>{esc(c["role"])}</small></div></div></div>')
     else:
-        lis = "".join(f'<li><a href="{url(s)}">{esc(BY_SLUG[s]["nav_label"])}</a></li>' for s in ("estate-planning-attorney", "probate", "criminal-defense", "about-us", "reviews", "service-areas"))
+        lis = "".join(f'<li><a href="{url(s)}">{esc(BY_SLUG[s]["nav_label"])}</a></li>' for s in ("estate-planning-attorney", "probate", "criminal-defense", "eviction-lawyer-summerville-sc", "about-us", "reviews", "service-areas"))
         cards_.append(f'<div class="acard"><h3>Explore</h3><ul>{lis}</ul></div>')
     return '<aside class="aside">' + "".join(cards_) + "</aside>"
 
@@ -782,6 +783,7 @@ def write_preview(out_path):
               ("Estate planning", [p for p in PAGES if p["slug"] == "estate-planning-attorney" or p.get("hub") == "estate-planning-attorney"]),
               ("Probate", [p for p in PAGES if p["slug"] == "probate" or p.get("hub") == "probate"]),
               ("Criminal defense", [p for p in PAGES if p["slug"] == "criminal-defense" or p.get("hub") == "criminal-defense"]),
+              ("Landlord-tenant", [p for p in PAGES if p["slug"] == "eviction-lawyer-summerville-sc" or p.get("hub") == "eviction-lawyer-summerville-sc"]),
               ("Service areas", [p for p in PAGES if p["kind"] == "city"]),
               ("Blog", [p for p in PAGES if p["kind"] == "post"])]
     drawer = ""

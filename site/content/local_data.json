@@ -35,7 +35,7 @@
    "zip": "29483",
    "phone": "(843) 832-0370",
    "url": "https://www.dorchestercountysc.gov/government/courts-judicial-services/magistrate-court",
-   "note": "Bond hearings, misdemeanors and tickets written by the Sheriff's Office or Highway Patrol in the Summerville area."
+   "note": "Evictions (ejectment), small claims up to $7,500, bond hearings, misdemeanors and tickets for the Summerville area. Open Monday–Friday 8:30 AM–5:00 PM; the office has a dedicated evictions clerk. Central Bond Court sits here at 9:00 AM and 3:00 PM every day."
   },
   "dorchester_magistrate_stgeorge": {
    "name": "Dorchester County Magistrate Court – St. George",
@@ -44,7 +44,7 @@
    "zip": "29477",
    "phone": "(843) 563-0370",
    "url": "https://www.dorchestercountysc.gov/government/courts-judicial-services/magistrate-court",
-   "note": ""
+   "note": "Evictions, small claims, misdemeanors and tickets for the upper county. Open Monday–Friday 8:30 AM–5:00 PM."
   },
   "summerville_municipal": {
    "name": "Summerville Municipal Court",
@@ -825,6 +825,18 @@
   "dui_video": {
    "label": "S.C. Code § 56-5-2953",
    "url": "https://www.scstatehouse.gov/code/t56c005.php"
+  },
+  "rlta": {
+   "label": "S.C. Code § 27-40-10 et seq. (Residential Landlord and Tenant Act)",
+   "url": "https://www.scstatehouse.gov/code/t27c040.php"
+  },
+  "ejectment": {
+   "label": "S.C. Code § 27-37-10 et seq. (ejectment proceedings)",
+   "url": "https://www.scstatehouse.gov/code/t27c037.php"
+  },
+  "magistrate_civil": {
+   "label": "S.C. Code § 22-3-10",
+   "url": "https://www.scstatehouse.gov/code/t22c003.php"
   }
  },
  "links": {

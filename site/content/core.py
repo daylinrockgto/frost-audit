@@ -10,13 +10,15 @@ TEL = f'<a href="tel:{firm.PHONE_E164}">{PH}</a>'
 # Rule from the client: the home page never mentions DUI. Criminal defense is described without it.
 
 home_practice = (
-    '<ul class="cards">'
+    '<ul class="cards three">'
     '<li class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8M8 16h5"/></svg></div><h3><a href="[[estate-planning-attorney]]">Estate planning</a></h3>'
     '<p>Wills, revocable living trusts, powers of attorney and living wills, written for South Carolina law and your family—blended families, business owners and special-needs planning included.</p><a class="more" href="[[estate-planning-attorney]]">Estate planning services</a></li>'
     '<li class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div><h3><a href="[[probate]]">Probate &amp; estate administration</a></h3>'
     '<p>Opening and settling an estate in Dorchester, Berkeley or Charleston County, executor guidance, small-estate affidavits, will contests, guardianship and conservatorship—from an attorney who sat as an associate probate judge.</p><a class="more" href="[[probate]]">Probate services</a></li>'
     '<li class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3><a href="[[criminal-defense]]">Criminal defense</a></h3>'
     '<p>Drug charges, domestic violence, bond hearings, arrest warrants, traffic offenses and expungements in magistrate, municipal and General Sessions court—defended by a former detective who knows how cases are built.</p><a class="more" href="[[criminal-defense]]">Criminal defense services</a></li>'
+    '<li class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div><h3><a href="[[eviction-lawyer-summerville-sc]]">Evictions &amp; landlord-tenant</a></h3>'
+    '<p>Evictions, tenant defense, security deposits and leases under the South Carolina Residential Landlord and Tenant Act, in the Dorchester, Berkeley and Charleston County magistrate courts—from an attorney who presided over these cases as a magistrate.</p><a class="more" href="[[eviction-lawyer-summerville-sc]]">Landlord-tenant services</a></li>'
     f'<li class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 13l2-5h14l2 5v6H3z"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/></svg></div><h3><a href="{firm.PI_SITE}" rel="noopener">Personal injury</a></h3>'
     f'<p>Car, truck and motorcycle crashes, dog bites and wrongful death claims are handled on our dedicated injury site, where Tara explains what to do before you talk to an insurance company.</p><a class="more" href="{firm.PI_SITE}practice-areas/car-accidents/" rel="noopener">Injured in an accident? Start here</a></li>'
     '</ul>')
@@ -51,6 +53,8 @@ home_faqs = [
      f"We prepare durable (financial) powers of attorney, health care powers of attorney and living wills under South Carolina's statutes, usually as part of a complete plan. See {A('power-of-attorney', 'powers of attorney')} and {A('living-will', 'living wills')}."),
     ("Who helps with trust amendments or restatements in Summerville, SC?",
      f"We review trusts drafted anywhere—including plans from other states or online services—and amend or restate them so they work under South Carolina law. See {A('estate-plan-review', 'estate plan reviews and trust amendments')}."),
+    ("Do you handle evictions and landlord-tenant disputes?",
+     f"Yes. We represent landlords and tenants in the Dorchester, Berkeley and Charleston County magistrate courts: evictions, tenant defense, security deposit claims and leases under the South Carolina Residential Landlord and Tenant Act. Tara Frost presided over these cases as a Dorchester County magistrate. See {A('eviction-lawyer-summerville-sc', 'evictions and landlord-tenant')}."),
     ("Do you handle car accident and injury cases?",
      f"Yes. Tara Frost handles personal injury claims, and those cases live on our dedicated site, {ext(firm.PI_SITE, 'summervilleaccidentattorney.com')}. Start there, or call {TEL} and we will point you to the right place."),
     ("Where is your office, and do I need an appointment?",
@@ -61,12 +65,12 @@ home_body = "".join((
     section(
         twocol(
             '<div class="eyebrow">Who we are</div><h2 style="margin-top:0">A husband-and-wife law firm, rooted in Summerville</h2>'
-            '<p>Frost Law Group is Jack and Tara Frost: two attorneys, married to each other, practicing from a house-turned-office on Linwood Lane. We serve families across Dorchester, Berkeley and Charleston counties in estate planning, probate and criminal defense, and we handle injury claims through our dedicated accident practice.</p>'
+            '<p>Frost Law Group is Jack and Tara Frost: two attorneys, married to each other, practicing from a house-turned-office on Linwood Lane. We serve families across Dorchester, Berkeley and Charleston counties in estate planning, probate, criminal defense and landlord-tenant matters, and we handle injury claims through our dedicated accident practice.</p>'
             '<p>We treat every client like family. From the first conversation to the final signature we make the process clear and manageable, and we stand firm when it counts. Our Golden Retrievers may even greet you at the door.</p>'
             f'<p><a href="[[about-us]]">Meet the team →</a></p>',
             f'{img("couple-formal.jpg", "Jack and Tara Frost, attorneys at Frost Law Group in Summerville", "")}'
         ), cls="tint"),
-    section(home_practice, label="How we help", title="Legal services we offer", lead="Three practice areas under one roof, plus a dedicated personal injury practice. Each page below explains the law in plain English before it explains what we do."),
+    section(home_practice, cls="home-practice", label="How we help", title="Legal services we offer", lead="Four practice areas under one roof, plus a dedicated personal injury practice. Each page below explains the law in plain English before it explains what we do."),
     section(home_ff, cls="navy"),
     section(home_why, label="The Frost Law difference", title="Why families choose Frost Law Group"),
     section(
@@ -95,7 +99,7 @@ page("home", kind="home", layout="raw", hero_style="photo",
      h1='Estate Planning, Probate &amp; Criminal Defense Attorneys <span class="sub">in Summerville, South Carolina</span>',
      eyebrow="Frost First · Your Summerville, SC law firm",
      cta=[("contact-us", "Schedule a consultation", "btn light"), ("tel:" + firm.PHONE_E164, firm.PHONE, "btn ghost")],
-     lead="Wills and trusts, probate and estate administration, and criminal defense for Dorchester, Berkeley and Charleston County families. Injury claims, too, through our dedicated accident practice.",
+     lead="Wills and trusts, probate and estate administration, criminal defense and landlord-tenant matters for Dorchester, Berkeley and Charleston County families. Injury claims, too, through our dedicated accident practice.",
      quote="“Do justice, love kindness, and walk humbly with your God.” — Micah 6:8",
      hero_image="couple.jpg", hero_image_wide="couple-wide.jpg", hero_caption="Jack and Tara Frost with the Frost pups",
      body=home_body, priority=1.0, changefreq="weekly", nav_label="Home")
@@ -107,7 +111,7 @@ about_body = (
     '<p>Between them, they have seen the Lowcountry\'s legal system from almost every seat. Jack spent fourteen years as a Summerville police officer and then a Charleston County Sheriff\'s Office deputy, detective and SWAT team member before earning his law degree. Tara served as a Dorchester County Magistrate Judge from 2022 to 2025 and as a Dorchester County Associate Probate Judge from 2025 to 2026. That is why our advice tends to be specific: we know what the officer wrote down, what the judge will ask, and what the probate clerk will send back.</p>'
     '[[team]]'
     '<h2>How we divide the work</h2>'
-    f'<p><b>Tara</b> leads {A("probate", "probate and estate administration")}, {A("guardianship-and-conservatorship", "guardianship and conservatorship")} and our {A("estate-planning-attorney", "estate planning")} practice, and handles personal injury cases through {ext(firm.PI_SITE, "summervilleaccidentattorney.com")}. <b>Jack</b> leads {A("criminal-defense", "criminal defense")} and works alongside Tara on estate plans, especially for families with law-enforcement, military and first-responder benefits to protect. Every matter gets both sets of eyes. <b>Cassie</b> Snyder, our {A("team/cassie-snyder", "legal assistant and paralegal")}, manages the documents and case files behind every matter and is one of the people who answers when you call.</p>'
+    f'<p><b>Tara</b> leads {A("probate", "probate and estate administration")}, {A("guardianship-and-conservatorship", "guardianship and conservatorship")} our {A("estate-planning-attorney", "estate planning")} practice and {A("eviction-lawyer-summerville-sc", "landlord-tenant matters")} in the magistrate courts, and handles personal injury cases through {ext(firm.PI_SITE, "summervilleaccidentattorney.com")}. <b>Jack</b> leads {A("criminal-defense", "criminal defense")} and works alongside Tara on estate plans, especially for families with law-enforcement, military and first-responder benefits to protect. Every matter gets both sets of eyes. <b>Cassie</b> Snyder, our {A("team/cassie-snyder", "legal assistant and paralegal")}, manages the documents and case files behind every matter and is one of the people who answers when you call.</p>'
     '<h2>What it is like to work with us</h2>'
     + checks([
         "You meet with an attorney at the first appointment, not an intake specialist.",
@@ -187,7 +191,7 @@ tara_body = (
         "WealthCounsel member firm (estate planning)",
     ]) +
     '<h2>Practice focus</h2>'
-    f'<p>Tara leads {A("probate", "probate and estate administration")}, including {A("executor-duties", "guidance for personal representatives")}, {A("executor-disputes", "executor and beneficiary disputes")}, {A("will-contests", "will contests")} and {A("guardianship-and-conservatorship", "guardianship and conservatorship")}, and the firm\'s {A("estate-planning-attorney", "estate planning")} practice. Her personal injury work—car, truck and motorcycle crashes, dog bites and wrongful death—is on {ext(firm.PI_SITE, "summervilleaccidentattorney.com")}.</p>'
+    f'<p>Tara leads {A("probate", "probate and estate administration")}, including {A("executor-duties", "guidance for personal representatives")}, {A("executor-disputes", "executor and beneficiary disputes")}, {A("will-contests", "will contests")} and {A("guardianship-and-conservatorship", "guardianship and conservatorship")}, the firm\'s {A("estate-planning-attorney", "estate planning")} practice, and {A("eviction-lawyer-summerville-sc", "evictions and landlord-tenant cases")} in the magistrate courts where she once presided. Her personal injury work—car, truck and motorcycle crashes, dog bites and wrongful death—is on {ext(firm.PI_SITE, "summervilleaccidentattorney.com")}.</p>'
     '<h2>A note on her judicial service</h2>'
     '<p>Tara no longer serves on the bench and does not appear in matters she handled as a judge. What she brings to your case is an understanding of how probate and magistrate courts work in practice: the forms, the timelines, the hearings and the questions a judge is likely to ask.</p>'
     '<h2>Off the clock</h2>'

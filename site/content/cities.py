@@ -187,6 +187,7 @@ for c in CITIES:
             f'<b>{A("probate", "Probate and estate administration")}</b> — opening, administering and closing estates in the {esc(c["county"])} Probate Court, small-estate affidavits, and {A("executor-disputes", "disputes")} when they arise.',
             f'<b>{A("guardianship-and-conservatorship", "Guardianship and conservatorship")}</b> — for an aging parent or a minor, contested or not.',
             f'<b>{A("criminal-defense", "Criminal defense")}</b> — bond hearings at the {co["detention"]}, misdemeanors in magistrate and municipal court, and felonies in {esc(c["county"])} General Sessions, defended by a former officer.',
+            f'<b>{A("eviction-lawyer-summerville-sc", "Evictions and landlord-tenant")}</b> — ejectment, tenant defense, security deposits and leases in the {esc(c["county"])} magistrate courts.',
             f'<b>Personal injury</b> — car, truck and motorcycle crashes and dog bites, through {ext(firm.PI_SITE, "our dedicated injury site")}.',
         ]) +
         f'<h2>Getting to our office from {esc(c["name"])}</h2>'
