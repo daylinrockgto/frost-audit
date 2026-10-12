@@ -147,7 +147,7 @@ AREA_SERVED = ["Summerville", "Goose Creek", "Ladson", "North Charleston", "Monc
 # Old address (regex, no leading slash) -> new address. Applied in .htaccess as 301s.
 REDIRECTS = [
     ("probate-2/?", "/probate/"),
-    ("motor-vehicle-personal-injury/?", PI_SITE + "practice-areas/car-accidents/"),  # injury pages live on the injury site (audit rule 1)
+    ("motor-vehicle-personal-injury/?", PI_SITE + "car-accident-attorneys-in-summerville/"),  # injury pages live on the injury site (audit rule 1)
     ("personal-injury/?", PI_SITE),
     ("author/.*", "/about-us/"),
     ("durable-power-of-attorney/?", "/power-of-attorney/"),
