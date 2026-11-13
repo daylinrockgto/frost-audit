@@ -20,7 +20,7 @@ home_practice = (
     '<li class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div><h3><a href="[[eviction-lawyer-summerville-sc]]">Evictions &amp; landlord-tenant</a></h3>'
     '<p>Evictions, tenant defense, security deposits and leases under the South Carolina Residential Landlord and Tenant Act, in the Dorchester, Berkeley and Charleston County magistrate courts—from an attorney who presided over these cases as a magistrate.</p><a class="more" href="[[eviction-lawyer-summerville-sc]]">Landlord-tenant services</a></li>'
     f'<li class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 13l2-5h14l2 5v6H3z"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/></svg></div><h3><a href="{firm.PI_SITE}" rel="noopener">Personal injury</a></h3>'
-    f'<p>Car, truck and motorcycle crashes, dog bites and wrongful death claims are handled on our dedicated injury site, where Tara explains what to do before you talk to an insurance company.</p><a class="more" href="{firm.PI_SITE}practice-areas/car-accidents/" rel="noopener">Injured in an accident? Start here</a></li>'
+    f'<p>Car, truck and motorcycle crashes, dog bites and wrongful death claims are handled on our dedicated injury site, where Tara explains what to do before you talk to an insurance company.</p><a class="more" href="{firm.PI_SITE}car-accident-attorneys-in-summerville/" rel="noopener">Injured in an accident? Start here</a></li>'
     '</ul>')
 
 home_ff = (

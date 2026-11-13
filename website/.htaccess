@@ -14,7 +14,7 @@ RewriteCond %{QUERY_STRING} (^|&)swcfpc= [NC]
 RewriteRule ^(.*)$ /$1? [R=301,L]
 # old addresses -> new pages
 RewriteRule ^probate-2/?$ /probate/ [R=301,L]
-RewriteRule ^motor-vehicle-personal-injury/?$ https://www.summervilleaccidentattorney.com/practice-areas/car-accidents/ [R=301,L]
+RewriteRule ^motor-vehicle-personal-injury/?$ https://www.summervilleaccidentattorney.com/car-accident-attorneys-in-summerville/ [R=301,L]
 RewriteRule ^personal-injury/?$ https://www.summervilleaccidentattorney.com/ [R=301,L]
 RewriteRule ^author/.*$ /about-us/ [R=301,L]
 RewriteRule ^durable-power-of-attorney/?$ /power-of-attorney/ [R=301,L]
