@@ -56,6 +56,7 @@ LLMS_SUMMARY = ("Frost Law Group, LLC is a husband-and-wife law firm in Summervi
 
 LOGO = "logo.png"  # the firm's logo, pulled from the live site
 OG_SOURCE = "couple.jpg"
+GA4_ID = ""  # Google Analytics 4 measurement ID (G-XXXXXXXXXX). Empty means no analytics tag is emitted.
 FORM_ENDPOINT = "https://formspree.io/f/xdekonez"  # Formspree form "Website contact"; submissions are emailed to the firm
 
 ATTORNEYS = {
@@ -113,9 +114,9 @@ HUB_SPOKES = {
                                  "estate-planning-for-blended-families", "estate-plan-review", "estate-planning-for-business-owners",
                                  "special-needs-planning", "dying-without-a-will-in-south-carolina", "estate-planning-costs", "high-net-worth-estate-planning",
                                  "estate-planning-attorney-charleston-sc"],
-    "probate": ["probate-process", "executor-duties", "executor-disputes", "small-estate-affidavit", "will-contests",
-                "guardianship-and-conservatorship", "guardianship-of-minors", "trust-administration", "probate-courts",
-                "dorchester-county-probate-court", "berkeley-county-probate-court", "charleston-county-probate-court", "probate-attorney-charleston-sc"],
+    "probate": ["probate-process", "executor-duties", "small-estate-affidavit", "dorchester-county-probate-court", "berkeley-county-probate-court",
+                "charleston-county-probate-court", "probate-courts", "guardianship-and-conservatorship", "guardianship-of-minors",
+                "executor-disputes", "will-contests", "trust-administration", "probate-attorney-charleston-sc"],
     "criminal-defense": ["dui-lawyer-summerville-sc", "drug-charges", "domestic-violence-defense", "bond-hearings", "expungements", "traffic-tickets", "arrest-warrants"],
     "eviction-lawyer-summerville-sc": ["south-carolina-eviction-process", "south-carolina-security-deposit-law"],
 }
@@ -123,7 +124,7 @@ HUB_ATTORNEY = {"estate-planning-attorney": "tara", "probate": "tara", "criminal
 
 NAV = [
     ("Estate Planning", "estate-planning-attorney", HUB_SPOKES["estate-planning-attorney"][:8], "All estate planning services"),
-    ("Probate", "probate", HUB_SPOKES["probate"][:9], "All probate services"),
+    ("Probate", "probate", HUB_SPOKES["probate"], "All probate services"),
     ("Criminal Defense", "criminal-defense", [s for s in HUB_SPOKES["criminal-defense"] if s != "dui-lawyer-summerville-sc"], "All criminal defense services"),
     ("Landlord-Tenant", "eviction-lawyer-summerville-sc", HUB_SPOKES["eviction-lawyer-summerville-sc"], "All landlord-tenant services"),
     ("Personal Injury", PI_SITE, [], ""),  # external: the injury site owns every injury page
@@ -136,7 +137,9 @@ FOOTER_PRACTICE = [("Estate planning", "estate-planning-attorney"), ("Wills", "l
                    ("Criminal defense", "criminal-defense"), ("Expungements", "expungements"), ("Evictions & landlord-tenant", "eviction-lawyer-summerville-sc"),
                    ("County probate court guides", "probate-courts")]
 FOOTER_EXPLORE = [("Our team", "about-us"), ("Jack C. Frost", "attorneys/jack-frost"), ("Tara L. Frost", "attorneys/tara-frost"), ("Client reviews", "reviews"),
-                  ("In the Know (blog)", "blog"), ("Frequently asked questions", "faq"), ("Contact & directions", "contact-us")]
+                  ("In the Know (blog)", "blog"), ("Frequently asked questions", "faq"), ("Contact & directions", "contact-us"),
+                  ("Dorchester County Probate Court guide", "dorchester-county-probate-court"), ("Berkeley County Probate Court guide", "berkeley-county-probate-court"),
+                  ("Charleston County Probate Court guide", "charleston-county-probate-court")]
 FOOTER_AREAS = ["service-areas/summerville", "service-areas/goose-creek", "service-areas/ladson", "service-areas/north-charleston", "service-areas/moncks-corner",
                 "service-areas/hanahan", "service-areas/charleston", "service-areas/mount-pleasant", "service-areas/ridgeville", "service-areas/st-george"]
 

@@ -14,7 +14,7 @@ home_practice = (
     '<li class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8M8 16h5"/></svg></div><h3><a href="[[estate-planning-attorney]]">Estate planning</a></h3>'
     '<p>Wills, revocable living trusts, powers of attorney and living wills, written for South Carolina law and your family—blended families, business owners and special-needs planning included.</p><a class="more" href="[[estate-planning-attorney]]">Estate planning services</a></li>'
     '<li class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div><h3><a href="[[probate]]">Probate &amp; estate administration</a></h3>'
-    '<p>Opening and settling an estate in Dorchester, Berkeley or Charleston County, executor guidance, small-estate affidavits, will contests, guardianship and conservatorship—from an attorney who sat as an associate probate judge.</p><a class="more" href="[[probate]]">Probate services</a></li>'
+    '<p>Opening and settling an estate in <a href="[[dorchester-county-probate-court]]">Dorchester</a>, <a href="[[berkeley-county-probate-court]]">Berkeley</a> or <a href="[[charleston-county-probate-court]]">Charleston County</a>, executor guidance, small-estate affidavits, will contests, guardianship and conservatorship—from an attorney who sat as an associate probate judge.</p><a class="more" href="[[probate]]">Probate services</a></li>'
     '<li class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3><a href="[[criminal-defense]]">Criminal defense</a></h3>'
     '<p>Drug charges, domestic violence, bond hearings, arrest warrants, traffic offenses and expungements in magistrate, municipal and General Sessions court—defended by a former detective who knows how cases are built.</p><a class="more" href="[[criminal-defense]]">Criminal defense services</a></li>'
     '<li class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div><h3><a href="[[eviction-lawyer-summerville-sc]]">Evictions &amp; landlord-tenant</a></h3>'
@@ -85,7 +85,7 @@ home_body = "".join((
         '<ul class="areas">' + "".join(f'<li><a href="[[{s}]]">{esc(n)}</a></li>' for s, n in [("service-areas/summerville", "Summerville"), ("service-areas/goose-creek", "Goose Creek"), ("service-areas/ladson", "Ladson"), ("service-areas/north-charleston", "North Charleston"), ("service-areas/moncks-corner", "Moncks Corner"), ("service-areas/hanahan", "Hanahan"), ("service-areas/charleston", "Charleston"), ("service-areas/mount-pleasant", "Mount Pleasant"), ("service-areas/ridgeville", "Ridgeville"), ("service-areas/st-george", "St. George"), ("service-areas/nexton", "Nexton"), ("service-areas/cane-bay", "Cane Bay")]) + '</ul>'
         '<p><a href="[[service-areas]]">All communities and courts we serve →</a></p>',
         label="Where we work", title="Serving Summerville and the tri-county Lowcountry"),
-    section('[[postcards:blog/new-summerville-residents-estate-plan,blog/hurricane-season-documents-dorchester-county,blog/guardianship-aging-parent-summerville]]' + '<p><a href="[[blog]]">All articles →</a></p>',
+    section('[[latestposts:3]]' + '<p><a href="[[blog]]">All articles →</a></p>',
             cls="tint", label="In the Know", title="Local news, explained by your lawyers"),
     section(
         '[[nap]]' + '[[map]]' + f'<p style="margin-top:1rem">{local.office_roads_sentence()}</p>' + '[[findus]]',
@@ -254,7 +254,7 @@ contact_form = (
     '<div><button class="btn" type="submit">Send message</button></div></form>')
 
 contact_body = (
-    section('[[nap]]' + f'<div class="nap"><div><h3>Email</h3><p><a href="mailto:{firm.ATTORNEYS["jack"]["email"]}">{firm.ATTORNEYS["jack"]["email"]}</a><br><a href="mailto:{firm.ATTORNEYS["tara"]["email"]}">{firm.ATTORNEYS["tara"]["email"]}</a></p><p class="small">For a new matter, a call gets a faster answer.</p></div><div><h3>Mail</h3><p>{firm.NAME}<br>{firm.PO_BOX}</p><p class="small">Please send documents to the P.O. Box, and come to Linwood Lane in person.</p></div><div><h3>Attorneys</h3><p><a href="[[attorneys/jack-frost]]">Jack C. Frost</a>, SC Bar No. 103633<br><a href="[[attorneys/tara-frost]]">Tara L. Frost</a>, SC Bar No. 100610</p></div></div>' + '[[map]]', wrap=True),
+    section('<h2>Visit, call or write</h2>[[nap]]' + f'<div class="nap"><div><h3>Email</h3><p><a href="mailto:{firm.ATTORNEYS["jack"]["email"]}">{firm.ATTORNEYS["jack"]["email"]}</a><br><a href="mailto:{firm.ATTORNEYS["tara"]["email"]}">{firm.ATTORNEYS["tara"]["email"]}</a></p><p class="small">For a new matter, a call gets a faster answer.</p></div><div><h3>Mail</h3><p>{firm.NAME}<br>{firm.PO_BOX}</p><p class="small">Please send documents to the P.O. Box, and come to Linwood Lane in person.</p></div><div><h3>Attorneys</h3><p><a href="[[attorneys/jack-frost]]">Jack C. Frost</a>, SC Bar No. 103633<br><a href="[[attorneys/tara-frost]]">Tara L. Frost</a>, SC Bar No. 100610</p></div></div>' + '[[map]]', wrap=True),
     section(
         twocol(
             '<h3 style="margin-top:0">What to expect at your first visit</h3>' + checks([
@@ -346,6 +346,7 @@ _BS["faq"]["_faq_schema"] = all_faqs
 # ----------------------------------------------------------------------------- SERVICE AREAS index
 sa_body = (
     '<p class="lead">Frost Law Group is in Summerville, and we appear in the probate, magistrate, municipal and General Sessions courts of Dorchester, Berkeley and Charleston counties. Which courthouse handles your matter depends on where you live and, for a criminal charge, where it happened. Each community page below explains that and gives directions to our office on local roads.</p>'
+    '<h2>Communities by county</h2>'
     '[[citylist]]'
     '<h2>The courts we appear in</h2>'
     '[[courts:dorchester_probate,dorchester_courthouse,dorchester_magistrate_summerville,summerville_municipal,dorchester_detention,berkeley_probate,berkeley_courthouse,hill_finklea,charleston_probate,charleston_judicial,al_cannon,north_charleston_municipal,goose_creek_municipal,colleton_probate]]'
@@ -361,6 +362,7 @@ page("service-areas", kind="page", layout="one",
 blog_body = (
     '<p class="lead">Local news raises legal questions—a new subdivision, a hurricane forecast, a change in state law, a story about an estate dispute. Jack writes about criminal defense; Tara writes about probate and estate planning. Each article answers the question people are actually asking on Nextdoor, Reddit and Google, and links to the news source so you can read the original.</p>'
     f'<div class="links"><a href="{esc(firm.PREFERRED_SOURCE_URL)}" rel="noopener" target="_blank">Add Frost Law Group as a preferred source on Google</a><a href="{esc(firm.FACEBOOK)}" rel="noopener" target="_blank">Follow on Facebook</a><a href="{esc(firm.INSTAGRAM)}" rel="noopener" target="_blank">Follow on Instagram</a></div>'
+    '<h2>All articles</h2>'
     '[[latestposts:40]]'
     + band("Have a question the news raised?", "Send it to us. If it is one other families are asking, we will write the answer.")
 )

@@ -167,8 +167,13 @@ def facts_block(c):
     return f'<h2>About {esc(c["name"])}</h2><div class="table-wrap"><table><tbody>{trs}</tbody></table></div>'
 
 
+COURT_GUIDE = {"Dorchester County": "dorchester-county-probate-court", "Berkeley County": "berkeley-county-probate-court", "Charleston County": "charleston-county-probate-court"}
+
 for c in CITIES:
     co = COUNTY[c["county"]]
+    guide = COURT_GUIDE.get(c["county"])
+    court_name = A(guide, f'{c["county"]} Probate Court') if guide else f'{esc(c["county"])} Probate Court'
+    guide_line = f'<p>Opening an estate? Read our guide to the {A(guide, esc(c["county"]) + " Probate Court")}: where to file, hours, fees, forms and the timeline.</p>' if guide else ""
     court_keys = [k for k in (co["probate"], co["probate_extra"], co["courthouse"], co["magistrate"], c["court"]) if k]
     r = ROUTES.get(c["route"], {})
     dist = f' The drive is about {esc(r["miles"])} miles and {esc(r["minutes"])} minutes in normal traffic.' if r.get("miles") else ""
@@ -180,11 +185,12 @@ for c in CITIES:
         f'<p>{co["blurb"]}</p>'
         f'<p>{c["note"]}</p>'
         f'[[courts:{",".join(court_keys)}]]'
+        + guide_line +
         f'<h2>{esc(c["angle"][0])}</h2><p>{c["angle"][1]}</p>'
         f'<h2>How we help {esc(c["name"])} families</h2>'
         + checks([
             f'<b>{A("estate-planning-attorney", "Estate planning")}</b> — wills, revocable trusts, powers of attorney and living wills drafted for South Carolina law and recorded in {esc(c["county"])} where required.',
-            f'<b>{A("probate", "Probate and estate administration")}</b> — opening, administering and closing estates in the {esc(c["county"])} Probate Court, small-estate affidavits, and {A("executor-disputes", "disputes")} when they arise.',
+            f'<b>{A("probate", "Probate and estate administration")}</b> — opening, administering and closing estates in the {court_name}, small-estate affidavits, and {A("executor-disputes", "disputes")} when they arise.',
             f'<b>{A("guardianship-and-conservatorship", "Guardianship and conservatorship")}</b> — for an aging parent or a minor, contested or not.',
             f'<b>{A("criminal-defense", "Criminal defense")}</b> — bond hearings at the {co["detention"]}, misdemeanors in magistrate and municipal court, and felonies in {esc(c["county"])} General Sessions, defended by a former officer.',
             f'<b>{A("eviction-lawyer-summerville-sc", "Evictions and landlord-tenant")}</b> — ejectment, tenant defense, security deposits and leases in the {esc(c["county"])} magistrate courts.',
@@ -197,13 +203,15 @@ for c in CITIES:
         + band(f"Live in {c['name']}? Call Frost first.", "Consultations at our Summerville office, or by phone and video when the drive is not worth it.")
     )
     faqs = [
-        (f"Which probate court handles an estate for a {c['name']} address?", f"The {c['county']} Probate Court in {co['seat']}. Estates are opened in the county where the person lived at death."),
+        (f"Which probate court handles an estate for a {c['name']} address?", f"The {c['county']} Probate Court in {co['seat']}. Estates are opened in the county where the person lived at death." + (f" Our {A(guide, 'guide to the court')} covers hours, fees and forms." if guide else "")),
         (f"Where is the bond hearing after an arrest in {c['name']}?", f"County arrests are heard at the {co['detention']}, usually within 24 hours. Municipal charges are heard by the municipal judge for that town." if c["court"] else f"At the {co['detention']}, usually within 24 hours of a warrant arrest."),
         (f"Do you meet clients in {c['name']}?", "Consultations are at our Summerville office or by phone and video. For estate-plan signings we can sometimes arrange a meeting closer to you; ask when you call."),
     ]
-    title = f"{c['name']}, SC Estate Planning, Probate & Criminal Defense Attorneys"
-    if len(title) > 70:
-        title = f"{c['name']} Estate Planning, Probate & Criminal Defense Lawyers"
+    title = f"{c['name']}, SC Attorneys | Estate, Probate & Criminal Defense"
+    if len(title) > 60:
+        title = f"{c['name']} Attorneys | Estate, Probate & Criminal Defense"
+    if len(title) > 60:
+        title = f"{c['name']} Lawyers | Estate, Probate & Criminal"
     desc = f"Estate planning, probate and criminal defense for {c['name']} families from Frost Law Group in Summerville: which {c['county']} courts hear your case and how to reach us."
     if len(desc) > 160:
         desc = f"Estate planning, probate and criminal defense for {c['name']} families from Frost Law Group: which courts hear your case and how to reach us."

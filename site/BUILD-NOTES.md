@@ -45,6 +45,17 @@ Driven by the Search Console and keyword data in the OpenSEO project: the firm a
 - **Statewide rewrites of existing spokes** so each owns its query: first-offense DUI (penalty table by breath result, the 2024 all-offender interlock rule), domestic violence by degree, expungement (fees, waits, correct circuits), driving under suspension, bench warrants, power of attorney (the § 62-8-109(c) recording rule), living will (the § 44-77-40 witness rules), small estate affidavit (the $45,000 limit and Form 420ES).
 - `meta.py` holds the final titles (≤ 64 characters) and descriptions (≤ 160) for every new and rewritten page; the inline titles in the content files are longer working titles that META overrides.
 
+## November 2026 quick wins and posts
+
+Driven by five weeks of Search Console data after the October release (impressions up from ~9,700 to ~29,600 per 28 days; the eviction, deposit, warrants and county court pages at the top of the site).
+
+- **County probate court guides get link equity.** All three guides are now in the Probate menu, the footer "Explore" column, the probate hub (their own card row), the home page's probate card, the matching city pages (a "read our guide" line under the court cards, the probate bullet and the FAQ) and a "Full guides" line at the top of `/probate-courts/`. The overview had been outranking the Dorchester guide for "dorchester county probate court".
+- **Snippets on the guides** now carry the phone number and hours (titles and descriptions in `meta.py`), because the Charleston guide drew 1 click from 693 impressions at position 5.9.
+- **Query-matched sections:** CDR offense-code table (3811/3812/3813/3814) and FAQ on the domestic violence page; county-by-county "where to look" table (public index links, sheriffs' warrants units) and two FAQs on the warrants page; "Commercial evictions" section and FAQ on the landlord-tenant hub; "Evicting someone who never signed a lease" section on the eviction process page. Sources: sccourts.org CDR codes, the county public index pages, the Charleston County Sheriff's warrant search page, S.C. Code §§ 56-25-20, 56-1-390 and 56-1-460.
+- **Four posts** in `posts.py` dated 2026-11-13, each linking into its money pages and linked back from them: eviction notices with sample wording (→ eviction process, landlord hub, deposit law); health care POA vs. living will (→ POA, living will, plan review); the $45,000 small estate limit (→ small estate, probate process, county guides); unpaid ticket → bench warrant → suspension (→ traffic tickets, warrants, bond hearings). The home page now shows the three latest posts automatically.
+- **GA4 is wired but off.** Set `GA4_ID` in `site/content/firm.py` to the firm's measurement ID and rebuild; the tag emits `phone_call`, `email_click`, `cta_click` and (on the thank-you page) `generate_lead` events. Previews never carry the tag.
+- **Audit items:** city-page titles shortened to 60 characters or fewer, other long titles trimmed in `meta.py`, and the six heading-order skips fixed (court cards moved below the first H2 on the guides; H2s added on the blog index, contact and service-areas pages).
+
 ## Blog authorship: split them, by expertise, with a "reviewed by" line
 
 What moves the needle is not "two authors" but *credible* authors writing consistently on the topics they can prove they know. The recommendation, implemented in the build:

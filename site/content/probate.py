@@ -21,6 +21,9 @@ hub_body = (
     '<p>Not every estate needs full probate. The size of the estate, how assets are titled, and whether a valid will exists all change the path. We evaluate each family\'s situation and recommend the simplest route that works.</p>'
     '<h2>How we help</h2>'
     '[[cards:probate-process,executor-duties,small-estate-affidavit,probate-courts]]'
+    '<h2>Guides to the three probate courts</h2>'
+    '<p>Where to file, hours, fees, forms and what each court expects of a family opening an estate.</p>'
+    '[[cards:dorchester-county-probate-court,berkeley-county-probate-court,charleston-county-probate-court]]'
     '<h2>When there is a dispute</h2>'
     '<p>Probate is not always smooth. When heirs disagree, a personal representative will not account, or a will looks wrong, the probate court decides—and the family needs an attorney who knows how those hearings run.</p>'
     '[[cards:executor-disputes,will-contests,guardianship-and-conservatorship,trust-administration]]'
@@ -175,8 +178,9 @@ sp("small-estate-affidavit",
                  "At least thirty days since the death",
                  "No personal representative appointed and no application pending, here or anywhere else",
                  "The person signing is a successor entitled to the property: an heir under the will or the intestacy statute, or someone who paid reasonable funeral expenses, who counts as a claiming successor under the statute",
-                 "Personal property only; real estate titled solely in the decedent’s name cannot pass by affidavit"]) +
-       '<h2>What does not count toward the $45,000</h2>'
+                 "Personal property only; real estate titled solely in the decedent’s name cannot pass by affidavit"]) 
+       + f'<p>The background on the 2025 increase, and who it lets skip probate, is in our article {A("blog/south-carolina-small-estate-limit-45000", "on the new $45,000 limit")}.</p>'
+       + '<h2>What does not count toward the $45,000</h2>'
        '<p>Assets that pass outside probate are not part of the calculation: life insurance and retirement accounts with named beneficiaries, jointly owned accounts and real estate with survivorship, payable-on-death and transfer-on-death accounts, and anything already in a trust. A family with a $350,000 house held jointly, a $200,000 IRA with a named beneficiary and a $30,000 checking account in Dad’s name alone can usually use the affidavit for the checking account.</p>'
        '<h2>How to file, step by step</h2>'
        + steps([("Gather the numbers.", " Statements as of the date of death, vehicle titles and a certified death certificate. Value vehicles at fair market value and subtract any loan balance."),
@@ -311,6 +315,7 @@ sp("probate-courts", card_new=True,
    summary="Which of the three probate courts has your case, with a detailed guide for each.",
    body=(
        answer("Estates are opened in the probate court of the county where the person was domiciled at death; conservatorships and adult guardianships are filed where the person lives. Most Summerville addresses are in Dorchester County and file in St. George, but Nexton, Cane Bay and Carnes Crossroads are in Berkeley County and file in Moncks Corner. North Charleston, Charleston, Mount Pleasant and the islands file in Charleston County. Each court has its own intake routine, which the three guides below explain.", "The short answer")
+       + f'<p class="lead"><b>Full guides:</b> {A("dorchester-county-probate-court", "Dorchester County Probate Court")} · {A("berkeley-county-probate-court", "Berkeley County Probate Court")} · {A("charleston-county-probate-court", "Charleston County Probate Court")}</p>'
        + '<h2>Which court has your case</h2>'
        '<p>Domicile, not the place of death or the location of the property, decides the county. A Summerville resident who died at MUSC is a Dorchester County estate; a Goose Creek resident who owned a lot in Dorchester County is a Berkeley County estate, and the Dorchester property is handled in it. A Summerville address can fall in Dorchester <em>or</em> Berkeley County, so check the county on the property tax bill or voter registration before filing. Only real estate in another state requires a second, ancillary proceeding there.</p>'
        '[[cards:dorchester-county-probate-court,berkeley-county-probate-court,charleston-county-probate-court]]'
@@ -355,9 +360,9 @@ sp("dorchester-county-probate-court", card_new=True,
    summary="Address, hours, the worksheet-and-seminar rule, forms, fees and timelines at the St. George courthouse.",
    body=(
        answer("The Dorchester County Probate Court is at 5200 E. Jim Bilton Boulevard, St. George, SC 29477, open Monday through Friday from 8:30 AM to 5:00 PM, at (843) 563-0105 or (843) 832-0105. It handles estates, adult guardianships and conservatorships, conservatorships for minors, minor settlements of $25,000 or less, involuntary commitments and marriage licenses. A family opening an estate without an attorney must complete the court’s Opening Probate Worksheet and attend its Opening Probate Seminar before filing; an attorney files directly. Estate files can be searched online at southcarolinaprobate.net.", "The short answer")
-       + '[[courts:dorchester_probate]]'
        + '<h2>Who files here</h2>'
        '<p>An estate is opened in the county where the person was domiciled at death, not where they died or where the property sits. Summerville proper, Knightsville, Lincolnville, Ridgeville, Harleyville, Reevesville, St. George and the Dorchester County side of Ladson all file in St. George. The exceptions trip people up: Nexton, Cane Bay, Carnes Crossroads and much of the Highway 17-A corridor carry Summerville addresses but lie in Berkeley County and file in Moncks Corner. The county on the property tax bill or voter registration settles it.</p>'
+       '[[courts:dorchester_probate]]'
        '<h2>Before you file: the worksheet and the seminar</h2>'
        f'<p>Dorchester County is unusual in requiring preparation before a family files on its own. If the decedent lived in the county and died within the last ten years, a person who wants to open the estate without an attorney must download and complete the court’s {ext("https://www.dorchestercountysc.gov/government/courts-judicial-services/probate-court/estate-division", "Opening Probate Worksheet")}, print it and return it with the documents it lists. Once an estate clerk approves the worksheet, the court assigns a date for an Opening Probate Seminar, where staff explain the process and help complete the opening documents. A family that does not want to attend the seminar must retain an attorney. If more than ten years have passed since the death, the court must hold a hearing to determine heirs, with a formal petition, personal service on every heir, publication and a $150 filing fee; the court itself recommends a lawyer for that.</p>'
        '<h2>Opening an estate, step by step</h2>'
@@ -399,9 +404,9 @@ sp("berkeley-county-probate-court", card_new=True,
    summary="Address, hours, walk-in and drop-box rules, forms, fees and timelines at the Moncks Corner courthouse.",
    body=(
        answer("The Berkeley County Probate Court is at 300-B California Avenue, Moncks Corner, SC 29461, (843) 719-4519, open Monday through Friday from 9:00 AM to 5:00 PM; walk-in filings are taken until 3:30 PM, and a drop box at the front of the courthouse accepts documents from 9:00 AM to 4:00 PM. The court has Estate, Guardian/Conservator, Therapeutic and Marriage License divisions. Guardians for children are appointed by the Family Court, not the probate court. Clerks help with forms at the counter but cannot give legal advice.", "The short answer")
-       + '[[courts:berkeley_probate]]'
        + '<h2>Who files here</h2>'
        '<p>An estate is opened in the county where the person was domiciled at death. Goose Creek, Hanahan, Moncks Corner, Daniel Island, Huger, Bonneau, St. Stephen and the Berkeley County side of Ladson file here, and so do the Summerville-address communities that sit across the county line: Nexton, Cane Bay, Carnes Crossroads, Sangaree and much of the Highway 17-A and Highway 176 corridors. Thousands of families moved into those neighborhoods in the last decade, and many assume Dorchester County. The county on the property tax bill or voter registration settles it, and filing in the wrong county costs weeks.</p>'
+       '[[courts:berkeley_probate]]'
        '<h2>How the court takes filings</h2>'
        f'<p>Berkeley County does not require a worksheet or seminar before a family files. Bring the documents to the counter during walk-in hours and an estate clerk will review them for completeness, or leave them in the drop box between 9:00 AM and 4:00 PM and the court will contact you. Hearings in contested matters are set by the court. The judge’s letter on the {link("berkeley_probate_site", "court’s website")} says it plainly: the clerks are capable and courteous, they cannot give legal advice, and the court recommends an attorney when you need legal assistance.</p>'
        '<h2>Opening an estate, step by step</h2>'
@@ -443,7 +448,6 @@ sp("charleston-county-probate-court", card_new=True,
    summary="Two Broad Street locations, EZ-Filing, appointments and workshops, forms, fees and timelines.",
    body=(
        answer("The Charleston County Probate Court’s Estate Division is on the third floor of the Historic Courthouse at 84 Broad Street, Charleston, SC 29401, (843) 958-5030. Its Commitment and Guardianship Division is in the Judicial Center at 100 Broad Street, Suite 469, (843) 958-5180. Both are open Monday through Friday from 8:30 AM to 5:00 PM, and the court accepts filings electronically at any hour through EZ-Filing. Families can book estate appointments online and attend the court’s free estate administration and planning workshops. Charleston, North Charleston, Mount Pleasant, West Ashley, James Island, Johns Island and the beach towns file here; Daniel Island is in Berkeley County.", "The short answer")
-       + '[[courts:charleston_probate]]'
        + '<h2>Which building you need</h2>'
        + table(["Matter", "Where", "Phone"], [
            ["Estates, wills, small estate affidavits, trust disputes", "Estate Division, Historic Courthouse, 84 Broad Street, 3rd floor", "(843) 958-5030"],
@@ -451,6 +455,7 @@ sp("charleston-county-probate-court", card_new=True,
            ["Marriage licenses", "Judicial Center, 100 Broad Street, Suite 469", "(843) 958-5183"],
        ]) +
        '<p>Drop boxes outside both offices accept documents after hours. Public estate and will records are searchable online at southcarolinaprobate.net.</p>'
+       '[[courts:charleston_probate]]'
        '<h2>Who files here</h2>'
        '<p>An estate is opened in the county where the person was domiciled at death. Charleston, North Charleston, Mount Pleasant, West Ashley, James Island, Johns Island, Wadmalaw Island, Folly Beach, Sullivan’s Island, Isle of Palms, Ravenel, Hollywood, Meggett, McClellanville and Awendaw all file here. Daniel Island is part of the City of Charleston but lies in Berkeley County, so a Daniel Island resident’s estate is opened in Moncks Corner. Hanahan and Goose Creek are Berkeley County as well.</p>'
        '<h2>EZ-Filing, appointments and workshops</h2>'

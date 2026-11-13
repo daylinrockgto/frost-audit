@@ -598,7 +598,24 @@ def head_html(p):
         '<link rel="preload" href="/assets/fonts/inter-300-700.woff2" as="font" type="font/woff2" crossorigin>'
         f'<link rel="stylesheet" href="{CSS_HREF}">'
         f'<script type="application/ld+json">{ld}</script>'
+        + ga_html(p) +
         '</head><body>')
+
+
+def ga_html(p):
+    """Google Analytics 4 tag with phone, email and contact-form lead events. Off until firm.GA4_ID is set; never in previews."""
+    gid = getattr(firm, "GA4_ID", "")
+    if MODE != "prod" or not gid:
+        return ""
+    lead = 'gtag("event","generate_lead",{method:"contact_form"});' if p["slug"] == "thank-you" else ""
+    return (f'<script async src="https://www.googletagmanager.com/gtag/js?id={gid}"></script>'
+            '<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());'
+            f'gtag("config","{gid}");' + lead +
+            'document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;var h=a.getAttribute("href")||"";'
+            'if(h.indexOf("tel:")===0){gtag("event","phone_call",{link_url:h,page_path:location.pathname})}'
+            'else if(h.indexOf("mailto:")===0){gtag("event","email_click",{link_url:h,page_path:location.pathname})}'
+            'else if(a.classList.contains("btn")&&h.indexOf("/contact-us/")===0){gtag("event","cta_click",{link_text:a.textContent.trim(),page_path:location.pathname})}});'
+            '</script>')
 
 
 def render_prod(p):
