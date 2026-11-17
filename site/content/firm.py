@@ -56,7 +56,7 @@ LLMS_SUMMARY = ("Frost Law Group, LLC is a husband-and-wife law firm in Summervi
 
 LOGO = "logo.png"  # the firm's logo, pulled from the live site
 OG_SOURCE = "couple.jpg"
-GA4_ID = ""  # Google Analytics 4 measurement ID (G-XXXXXXXXXX). Empty means no analytics tag is emitted.
+GA4_ID = "G-2QV9DR43L9"  # Google Analytics 4 measurement ID, from the "Frost Law Group" account under Legal Leads Group (property https://frostlawgroupsc.com, created 2026-11-17). Empty means no analytics tag is emitted.
 FORM_ENDPOINT = "https://formspree.io/f/xdekonez"  # Formspree form "Website contact"; submissions are emailed to the firm
 
 ATTORNEYS = {

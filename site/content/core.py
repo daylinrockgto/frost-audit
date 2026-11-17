@@ -378,13 +378,13 @@ privacy_body = (
     '<h2>What we collect</h2>'
     + ul([
         "<b>Information you send us.</b> When you use the contact form or call, you give us your name, contact details and a description of your matter. We use it only to respond to you and, if you hire us, to represent you. Contact-form submissions are delivered to us through Formspree, a form-processing service that stores them on our behalf under its own privacy policy.",
-        "<b>Website analytics.</b> We may use privacy-respecting analytics to understand which pages are read. Analytics data is aggregated and is not used to identify you.",
+        "<b>Website analytics.</b> We use Google Analytics to understand which pages are read and how visitors find the site. It records usage information such as the pages you view, the type of device you use and your approximate location. We do not use it to identify you, and Google's privacy policy applies to the data it collects.",
         "<b>Embedded maps.</b> The map on our contact page loads from Google only after you click to load it. Google's privacy policy applies to that map.",
     ]) +
     '<h2>What we do not do</h2>'
     '<p>We do not sell or rent personal information, and we do not share what you tell us with anyone outside the firm except as needed to provide legal services or as required by law. Communications through this website are not privileged until we agree to represent you, so please do not send confidential details about a criminal matter through the form.</p>'
     '<h2>Cookies and links</h2>'
-    '<p>This site sets no advertising cookies. Links to Google, Yelp, Facebook, Instagram, news outlets and government sites take you to those organizations\' own sites and policies.</p>'
+    '<p>This site sets no advertising cookies. Google Analytics sets cookies in your browser that tell one visit from another. Links to Google, Yelp, Facebook, Instagram, news outlets and government sites take you to those organizations\' own sites and policies.</p>'
     '<h2>Questions</h2>'
     f'<p>Write to Frost Law Group, LLC, {firm.STREET}, {firm.CITY}, {firm.STATE} {firm.ZIP}, or call {TEL}. Policy updated {firm.BUILD_DATE[:4]}.</p>'
 )
